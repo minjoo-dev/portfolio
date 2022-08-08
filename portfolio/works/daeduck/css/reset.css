@@ -1,0 +1,75 @@
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+b, u, i, center,dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video,fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	outline:0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, section, main {display: block;}
+a { text-decoration:none; color:inherit; }
+ul,li,ol,dl,dt,dd{ list-style:none;}
+table {	border-collapse: collapse; border-spacing: 0;}
+table th, table td{ vertical-align:middle; }
+table tbody{text-align:center;}
+button { background:transparent; border:0; outline:0; padding:0; margin:0; cursor:pointer; }
+fieldset,img {border:0 none; font-size:0;}
+dl,ul,ol,menu,li {list-style:none}
+img {vertical-align:top;}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle}
+button {border:0 none;background-color:transparent;cursor:pointer}
+th,td,input,select,textarea,button {font-size:12px;line-height:1.5;color:#333}
+a {color:inherit; text-decoration:none;}
+a:active, a:hover {text-decoration:none;}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar
+}
+*,::after,::before {
+    box-sizing: inherit
+}
+input {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+input::-ms-clear {display: none;} /* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; -moz-appearance: none; appearance: none;} /* input type number 에서 화살표 제거 */
+select {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+select::-ms-expand {display: none;} /* IE 에서 Select box 화살표 제거 */ 
+button {font-family:'Noto Sans KR', sans-serif; font-size:18px; color:#202020;}
+
+
+/* custom style */
+body {
+	font-family:'Noto Sans KR', sans-serif;
+	font-weight:400; 
+	font-size: 18px; 
+	color:#202020; 
+	letter-spacing:-0.03em; 
+	margin: 0 auto; 
+	line-height:1.2;
+	min-width:1200px; 
+	width:100%; 
+	height:100%; 
+	overflow:auto; 
+	overflow-x:hidden;
+	position:relative;
+}
+.respon_img {display:block;width:100%;}
+.clear:after {display:block;content:'';clear:both;}
+.left {float:left;}
+.right {float:right;}
+.ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.lock {overflow:hidden;}
+.hidden {display:none; opacity:0; text-indent:-9999px; padding:0; margin:0;}
+
+.wsize {width:1200px; margin:0 auto;}
+.wsize02 {width:1400px; margin: 0 auto;}
+.wsize03 {width:1480px; margin: 0 auto;}
+

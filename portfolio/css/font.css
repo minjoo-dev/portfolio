@@ -1,0 +1,120 @@
+/* Jua */
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap'); /* font-family: 'Jua', sans-serif; */
+
+/* Noto Sans KR */
+@font-face {
+	font-family: 'Noto';
+	font-style: normal;
+	font-weight: 100;
+	src: local('../font/NotoSansKR-Thin'), local('../font/NotoSansKR-Thin');
+	src: url(../font/NotoSansKR-Thin.eot);
+	src: url(../font/NotoSansKR-Thin.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Thin.woff) format('woff'),
+		 url(../font/NotoSansKR-Thin.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Thin.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto';
+	font-style: normal;
+	font-weight: 300;
+	src: local('../font/NotoSansKR-Light'), local('../font/NotoSansKR-Light');
+	src: url(../font/NotoSansKR-Light.eot);
+	src: url(../font/NotoSansKR-Light.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Light.woff) format('woff'),
+		 url(../font/NotoSansKR-Light.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Light.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('../font/NotoSansKR-Regular'), local('../font/NotoSansKR-Regular');
+	src: url(../font/NotoSansKR-Regular.eot);
+	src: url(../font/NotoSansKR-Regular.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Regular.woff) format('woff'),
+		 url(../font/NotoSansKR-Regular.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Regular.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto';
+	font-style: normal;
+	font-weight: 500;
+	src: local('../font/NotoSansKR-Medium'), local('../font/NotoSansKR-Medium');
+	src: url(../font/NotoSansKR-Medium.eot);
+	src: url(../font/NotoSansKR-Medium.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Medium.woff) format('woff'),
+		 url(../font/NotoSansKR-Medium.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Medium.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto';
+	font-style: normal;
+	font-weight: 700;
+	src: local('../font/NotoSansKR-Bold'), local('../font/NotoSansKR-Bold');
+	src: url(../font/NotoSansKR-Bold.eot);
+	src: url(../font/NotoSansKR-Bold.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Bold.woff) format('woff'),
+		 url(../font/NotoSansKR-Bold.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Bold.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto';
+	font-style: normal;
+	font-weight: 900;
+	src: local('../font/NotoSansKR-Black'), local('../font/NotoSansKR-Black');
+	src: url(../font/NotoSansKR-Black.eot);
+	src: url(../font/NotoSansKR-Black.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Black.woff) format('woff'),
+		 url(../font/NotoSansKR-Black.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Black.otf) format('truetype');
+}       
+
+/* Montserrat */
+@font-face {
+	font-family: 'Mont';
+	font-style: normal;
+	font-weight: 300;
+	src: local('../font/Montserrat-Light'), local('../font/Montserrat-Light');
+	src: url(../font/Montserrat-Light.eot);
+	src: url(../font/Montserrat-Light.eot?#iefix) format('embedded-opentype'),
+		 url(../font/Montserrat-Light.woff) format('woff'),
+		 url(../font/Montserrat-Light.woff2) format('woff2'),
+		 url(../font/Montserrat-Light.ttf) format('truetype');
+	unicode-range: U+0020-007E
+}    
+@font-face {
+	font-family: 'Mont';
+	font-style: normal;
+	font-weight: 400;
+	src: local('../font/Montserrat-Regular'), local('../font/Montserrat-Regular');
+	src: url(../font/Montserrat-Regular.eot);
+	src: url(../font/Montserrat-Regular.eot?#iefix) format('embedded-opentype'),
+		 url(../font/Montserrat-Regular.woff) format('woff'),
+		 url(../font/Montserrat-Regular.woff2) format('woff2'),
+		 url(../font/Montserrat-Regular.ttf) format('truetype');
+	unicode-range: U+0020-007E
+}  
+@font-face {
+	font-family: 'Mont';
+	font-style: normal;
+	font-weight: 500;
+	src: local('../font/Montserrat-Medium'), local('../font/Montserrat-Medium');
+	src: url(../font/Montserrat-Medium.eot);
+	src: url(../font/Montserrat-Medium.eot?#iefix) format('embedded-opentype'),
+		 url(../font/Montserrat-Medium.woff) format('woff'),
+		 url(../font/Montserrat-Medium.woff2) format('woff2'),
+		 url(../font/Montserrat-Medium.ttf) format('truetype');
+	unicode-range: U+0020-007E
+}  
+@font-face {
+	font-family: 'Mont';
+	font-style: normal;
+	font-weight: 600;
+	src: local('../font/Montserrat-SemiBold'), local('../font/Montserrat-SemiBold');
+	src: url(../font/Montserrat-SemiBold.eot);
+	src: url(../font/Montserrat-SemiBold.eot?#iefix) format('embedded-opentype'),
+		 url(../font/Montserrat-SemiBold.woff) format('woff'),
+		 url(../font/Montserrat-SemiBold.woff2) format('woff2'),
+		 url(../font/Montserrat-SemiBold.ttf) format('truetype');
+	unicode-range: U+0020-007E
+}  

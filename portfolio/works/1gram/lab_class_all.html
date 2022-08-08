@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <title>1Gram</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="./assets/images/common/1gram_favicon.ico">
+
+        <!-- Bootstrap Css -->
+        <link href="./assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+		<link href="./assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Icons Css -->
+        <link href="./assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- Sweet Alert-->
+        <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App Css-->
+        <link href="./assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+        <!-- Plugins css -->
+        <link href="./assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- Custom css -->
+		<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="javascript:void(0)" class="logo">
+                                <span class="logo-sm">
+                                    <img src="./assets/images/common/logo.svg" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="./assets/images/common/logo_1gram.png" alt="" height="39">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm header-item waves-effect" id="vertical-menu-btn">
+                            <span class="btn"><img src="./assets/images/common/icon_transfer_circle.png" alt="반응형 버튼"></span>
+                        </button>
+
+                        <div class="dropdown dropdown-mega d-none d-lg-block">
+                            <button type="button" class="btn header-item waves-effect header_menu">
+                                <span key="t-megamenu" class="header_item">수업</span>
+                            </button>
+                            <button type="button" class="btn header-item waves-effect header_menu active">
+                                <span key="t-megamenu" class="header_item">연구실</span>
+                            </button>
+                            <button type="button" class="btn header-item waves-effect header_menu">
+                                <span key="t-megamenu" class="header_item">나눔공간</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+						<div class="flex">
+							<div class="dropdown d-inline-block profile_box profile_box_a">
+								<button type="button" class="btn header-item noti-icon waves-effect alarm" id="page-header-notifications-dropdown"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<div class="btn_alarm">
+										<span class="img"><img src="./assets/images/common/icon_alarm.png" alt="알람"></span>
+										<span class="badge badge-danger badge-pill">3</span>
+									</div>
+								</button>
+								<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+									aria-labelledby="page-header-notifications-dropdown">
+									<div class="p-4 border-bottom">
+										<div class="row align-items-center">
+											<div class="col">
+												<h6 class="m-0" key="t-notifications"> 1gram.cc 알람메세지 </h6>
+											</div>
+										</div>
+									</div>
+									<div data-simplebar style="max-height: 230px;">
+										<a href="javascript:void(0)" class="text-reset notification-item">
+											<div class="media">
+												<div class="media-body">
+													<h6 class="mt-0 mb-1" key="t-your-order">알림 메시지 1</h6>
+													<div class="font-size-12 text-muted">
+														<p class="mb-1" key="t-grammer">알림 메시지입니다.</p>
+													</div>
+												</div>
+												<button type="button" class="btn">                
+													<i class="bx bx-x"></i>            
+												</button>  
+											</div>
+										</a>
+										<a href="javascript:void(0)" class="text-reset notification-item">
+											<div class="media">
+												<div class="media-body">
+													<h6 class="mt-0 mb-1" key="t-shipped">알림 메시지 2</h6>
+													<div class="font-size-12 text-muted">
+														<p class="mb-1" key="t-grammer">알림 메시지입니다.</p>
+													</div>
+												</div>
+												<button type="button" class="btn">                
+													<i class="bx bx-x"></i>            
+												</button>  
+											</div>
+										</a>
+									</div>
+									<div class="p-2 border-top">
+										<a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
+											<i class="mdi mdi-arrow-right-circle mr-1"></i> <span key="t-view-more">더보기</span> 
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="id d-inline-block profile_box profile_box_p">
+								<button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<img class="rounded-circle header-profile-user" src="./assets/images/common/icon_mypage.png" alt="프로필">
+									<div class="item_id d-none d-xl-inline-block" key="t-henry"><span>1gram</span>님</div>
+									<span class="item_arrow ml-3"><img src="./assets/images/common/icon_chevron_down.png" alt="화살표"></span>
+								</button>
+								<div class="dropdown-menu dropdown-menu-right">
+									<!-- item-->
+									<a class="dropdown-item " href="javascript:void(0)">
+										<i class="bx bx-user font-size-16 align-middle mr-1"></i>
+										<span key="t-profile">회원정보 수정</span>
+									</a>
+									<a class="dropdown-item " href="javascript:void(0)">
+										<i class="bx bx-help-circle font-size-16 align-middle mr-1"></i>
+										<span key="t-profile">고객 센터</span>
+									</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item text-danger" href="javascript:void(0)">
+										<i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
+										<span key="t-logout">로그아웃</span>
+									</a>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="vertical-menu">
+
+                <div data-simplebar class="h-100">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu" class="sidebar_menu">
+                        <!-- Left Menu Start -->
+                        <ul class="metismenu list-unstyled mm-show" id="side-menu">
+                            <li class="mm-active">
+                                <a href="javascript: void(0);" class="has-arrow waves-effect i_cls">
+                                    <span class="sidebar_icon"></span>
+                                    <span key="t-layouts">강의관리</span>
+                                </a>
+								<ul class="sub-menu mm-active" aria-expanded="false">
+                                    <li class="sub-menu-all mm-active"><a href="./lab_class_all.html" key="1gram_layout_1"><span class="sub-menu-item"></span>전체</a></li>
+                                    <li><a href="./lab_class_share.html" key="1gram_layout_2"><span class="sub-menu-item"></span>공유 받은 강의</a></li>
+                                    <li><a href="./lab_class.html" key="1gram_layout_3"><span class="sub-menu-item"></span>강의</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect i_std">
+                                    <span class="sidebar_icon"></span>
+                                    <span key="t-multi-level">학생관리</span>
+                                </a>
+                            </li>
+							<li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect i_pit">
+                                    <span class="sidebar_icon"></span>
+                                    <span key="t-multi-level">학습분석</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+                </div>
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 font-size-18">
+										강의 관리
+									</h4>
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0)"><span><img src="./assets/images/common/icon_home.png" alt="홈"></span></a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0)">연구실</a></li>
+                                            <li class="breadcrumb-item active"><a href="javascript: void(0)">강의 관리</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+						<div class="mt-4 fixed-box">
+							<div class="flex_between">
+								<div class="search-box search-box-youtube">
+									<div class="input-group">
+										<input type="text" class="form-control mb-2 mr-2 searchbox-space" placeholder="검색어를 입력하세요">
+										<div class="search_box">
+											<button type="button" class="btn chat-send w-md waves-effect waves-light mb-2 search_ytb_btns">
+												<span class="d-sm-inline-block ">검색</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="flex">
+									<a href="javascript:void(0)" class="btn_pl" data-toggle="modal" data-target="#modal06">새 폴더</a>
+									<a href="javascript:void(0)" class="btn_pl" data-toggle="modal" data-target="#modal01">수업 배포하기</a>
+								</div>
+							</div>
+
+							<div class="lab_wrap mt-4"> 	
+								<div class="item_box item_layout"> 	   
+									<a href="./lab_class_share.html" class="item_body"> 		
+										<div class="font-size-20 font-weight-bolder"> 		    
+											<div class="lab_img img_display"> 			
+												<img src="./assets/images/common/img_class_share.png" alt="공유받은강의"> 		
+											</div> 		   
+											<div class="mt-4 text-center"> 			   
+												<div class="mb-3 text-truncate" data-toggle="tooltip" data-placement="top" title="공유 받은 강의" data-original-title="공유 받은 강의">
+													<div class="text-dark">공유 받은 강의</div>
+												</div> 		
+											</div> 	
+										</div>
+									</a> 	
+								</div>
+
+								<div class="text-center item_box"> 	    
+									<div class="item_body"> 		
+										<div class="font-size-20"> 		    
+											<div class="lab_img img_display"> 			
+												<img src="./assets/images/common/img_class.png" alt="강의"> 		   
+											</div> 		  
+											<div class="mt-4 text-center font-weight-bolder" data-toggle="tooltip" data-placement="top" title="강의명" data-original-title="강의명"> 			 
+												<p class="mb-3 text-truncate"><a href="javascript:void(0)" class="text-dark">강의명</a></p> 		   
+											</div> 		
+										</div>
+									</div>            
+									<div class="item_footer bg-transparent border-top">
+										<div class="lab_btn_box d-flex"> 		           
+											<div class="flex-fill">  			           
+												<a href="javascript:void(0)" class="lab_btn" data-toggle="modal" data-target="#modal05">
+													<span><img src="./assets/images/common/icon_class_modify.png" alt="수정하기"></span>
+													수정하기
+												</a>  		 
+											</div> 					
+											<div class="flex-fill">		
+												<a href="javascript:void(0)" class="lab_btn" data-toggle="modal" data-target="#modal04">
+													<span><img src="./assets/images/common/icon_class_delete.png" alt="삭제하기"></span>
+													삭제하기
+												</a>		
+											</div>				
+										</div>         
+									</div> 
+								</div> 
+								
+								<div class="item_share_box checkbox">  <!-- checkbox 체크할 때 클래스명 checkbox 추가 -->
+									<div class="custom-control custom-checkbox check_box">  	
+										<input type="checkbox" class="custom-control-input" id="check_lec" checked>  	 
+										<label class="custom-control-label" for="check_lec"></label>
+									</div>  	
+									<div class="item_box text-center">  	
+										<div class="item_body">  		
+											<div class="lab_img lab_cls_img img_display mt-3 mb-2" data-toggle="modal" data-target="#modal08">  		   
+												<img src="./assets/images/common/sample02.jpg" alt="sample" class="mx-auto d-block">  	
+											</div>  	
+											<div class="item_txt mt-3">
+												<div class="badge_box">  		
+													<span class="badge badge-success font-size-11 m-1">운영중</span>  	
+												</div> 
+												<div class="mt-2 text-center" data-toggle="tooltip" data-placement="top" title="" data-original-title="수업명">  		
+													<div class="mb-1 text-truncate font-size-20 font-weight-bolder" data-toggle="modal" data-target="#modal08">
+														<a href="javascript:void(0)" class="text-dark lec_title_code">수업명</a>
+													</div>  		 
+													<p class="desc">종료일 : 2021-06-30</p>  		
+												</div>   
+											</div>
+										</div> 
+										<div class="item_footer bg-transparent border-top">
+											<div class="lab_btn_box d-flex btn-group"> 		           
+												<div class="flex-fill">  			           
+													<a href="javascript:void(0)" class="lab_btn" data-toggle="modal" data-target="#modal02">
+														<span><img src="./assets/images/common/icon_class_share.png" alt="공유하기"></span>
+														공유하기
+													</a>  		 
+												</div> 					
+												<div class="flex-fill btn_menu_lab">		
+													<a href="javascript:void(0)" class="lab_btn dropup dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<span><img src="./assets/images/common/icon_class_menu.png" alt="메뉴"></span>
+													</a>	
+													<div class="dropdown-menu">	
+														<a class="dropdown-item lec_move_own" href="javascript:void(0)"data-toggle="modal" data-target="#modal07">	   
+															<i class="bx bx-transfer-alt font-size-16 align-middle mr-1"></i>	  
+															<span key="t-profile">이동하기</span>	
+														</a>	
+														<a class="dropdown-item lec_edit_link" href="javascript:void(0)" data-toggle="modal" data-target="#modal05">	   
+															<i class="bx bx-edit-alt font-size-16 align-middle mr-1"></i>	 
+															<span key="t-profile">수정하기</span>
+														</a>	
+														<a class="dropdown-item btnCopyUrl" href="javascript:void(0)" data-toggle="modal" data-target="#modal03">	   
+															<i class="bx bx-copy-alt font-size-16 align-middle mr-1"></i>	   
+															<span key="t-profile">링크 복사하기</span>
+														</a>
+														<div class="dropdown-divider"></div>
+														<a class="dropdown-item text-danger lec_delete_btn" href="javascript:void(0)" data-toggle="modal" data-target="#modal04">	
+															<i class="bx bx-trash-alt font-size-16 align-middle mr-1 text-danger"></i>	
+															<span key="t-logout">삭제하기</span>	
+														</a>
+													</div>
+												</div>
+											</div>   
+										</div> 
+									</div> 
+								</div>
+
+							</div> <!--//lab wrap -->
+
+							
+						</div>
+                    </div>
+                </div>
+                <!-- End Page-content -->
+
+				<!--  Modal content -->
+				<div id="modal01" class="modal fade alert">
+					<div class="modal-dialog modal-dialog-centered modal-560">
+						<div class="modal-content">
+							<div class="modal-header">
+								<img src="./assets/images/common/img_modal_notice.png" alt="느낌표">
+							</div>
+							<div class="modal-body">
+								1개 이상의 배포할 강의를 선택하셔야 합니다
+							</div>
+							<div class="modal-footer flex">
+								<button type="button" class="btn-confirm" data-dismiss="modal" aria-label="Close">확인</button>
+							</div>
+
+						</div><!--// modal-content -->
+					</div><!--// modal-dialog -->
+				</div><!--// modal -->
+
+				<div id="modal02" class="modal fade ">
+					<div class="modal-dialog modal-dialog-centered modal-xl">
+						<div class="modal-content">
+							<div class="modal-header flex_between">
+								<h5 class="modal-title mt-0">공유하기</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true" class="btn_close"></span>
+								</button>
+							</div>
+							<form class="movie_option_form" onSubmit="return false;" >
+								<input type="hidden"  />
+								<div class="modal-body">
+									<div>
+										<form class="">
+											<div class="row lec_share01">
+												<div class="col-lg-12 select_box ">
+													<select class="form-control font-size-18" name="share_type" id="share_type" required="">
+														<option selected="selected" value="">공유 대상 정보를 선택하세요</option>
+														<option value="A">전체공유</option>
+														<option value="1">1명</option>
+														<option value="2">2명</option>
+													</select>
+												</div>
+											</div>
+
+											<!-- 전체공유 -->
+											<div class="row lec_shr_pop mt-3">
+												<div class="col-lg-12 ">
+													<label for="basicpill-pancard-input">학교급</label>
+													<div class="form-control btn-group flex-wrap" role="group">
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">초등학교</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">중/고등학교</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">공통</button>
+													</div>
+												</div>
+											</div>
+											
+											<div class="row lec_shr_pop mt-3">
+												<div class="col-lg-12 ">
+													<label for="basicpill-pancard-input">학년</label>
+													<div class="form-control btn-group flex-wrap" role="group">
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">1학년</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">2학년</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">3학년</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">4학년</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">5학년</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">6학년</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">공통</button>
+													</div>
+												</div>
+											</div>
+											
+											<div class="row lec_shr_pop mt-3">
+												<div class="col-lg-12 ">
+													<label for="basicpill-pancard-input">학기</label>
+													<div class="form-control btn-group flex-wrap" role="group">
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">1학기</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">2학기</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">공통</button>
+													</div>
+												</div>
+											</div>
+											
+											<div class="row lec_shr_pop mt-3">
+												<div class="col-lg-12 ">
+													<label for="basicpill-pancard-input">과목</label>
+													<div class="form-control btn-group flex-wrap" role="group">
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">국어</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">영어</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">수학</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">사회/역사/도덕</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">과학</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">예술</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">체육</button>
+														<button type="button" class="school_radio btn btn-outline-gray w-sm">기타</button>
+													</div>
+												</div>
+											</div> 
+											<!--// 전체공유 -->
+
+											<!-- 1명, 2명 -->
+											<div class="row mt-3">
+												<div class="col-lg-12 flex_between input_wrap">
+													<div class="input_box mr-2">
+														<input type="text" class="form-control bg_gray bd_gray" placeholder="공유대상 이메일을 입력하세요">
+													</div>
+													<button type="button" class="btn_cf chat-send bg_black fc_white waves-effect waves-light">
+														<span class="d-sm-inline-block">확인</span>
+													</button>
+												</div>
+											</div>
+
+											<div class="row mt-3">
+												<div class="col-lg-12 flex_between input_wrap">
+													<div class="input_box mr-2">
+														<input type="text" class="form-control bg_gray bd_gray" placeholder="공유대상 이메일을 입력하세요">
+													</div>
+													<button type="button" class="btn_cf chat-send bg_black fc_white waves-effect waves-light">
+														<span class="d-sm-inline-block">확인</span>
+													</button>
+												</div>
+											</div>
+											<!--// 1명, 2명 -->
+										</form>
+									</div>
+								</div>
+							</form>
+							<div class="modal-footer flex justify-content-center">
+								<button type="button" class="btn-confirm mr-2">공유하기</button>
+								<button type="button" class="btn-cancel " data-dismiss="modal" aria-label="Close">취소</button>
+							</div>
+
+						</div><!--// modal-content -->
+					</div><!--// modal-dialog -->
+				</div><!--// modal -->
+
+				<div id="modal03" class="modal fade alert">
+					<div class="modal-dialog modal-dialog-centered modal-560">
+						<div class="modal-content">
+							<div class="modal-header">
+								<img src="./assets/images/common/img_modal_success.png" alt="체크">
+							</div>
+							<div class="modal-body">
+								수업 링크가 복사되었습니다
+							</div>
+							<div class="modal-footer flex">
+								<button type="button" class="btn-confirm" data-dismiss="modal" aria-label="Close">확인</button>
+							</div>
+
+						</div><!--// modal-content -->
+					</div><!--// modal-dialog -->
+				</div><!--// modal -->
+
+				<div id="modal04" class="modal fade alert">
+					<div class="modal-dialog modal-dialog-centered modal-560">
+						<div class="modal-content">
+							<div class="modal-header">
+								<img src="./assets/images/common/img_modal_notice.png" alt="느낌표">
+							</div>
+							<div class="modal-body">
+								선택한 강의를 삭제하시겠습니까?
+							</div>
+							<div class="modal-footer flex">
+								<button type="button" class="btn-confirm mr-2">삭제</button>
+								<button type="button" class="btn-cancel" data-dismiss="modal" aria-label="Close">취소</button>
+							</div>
+
+						</div><!--// modal-content -->
+					</div><!--// modal-dialog -->
+				</div><!--// modal -->
+
+				
+				<div id="modal05" class="modal fade alert">
+					<div class="modal-dialog modal-dialog-centered modal-560">
+						<div class="modal-content">
+							<div class="modal-header">
+							</div>
+							<div class="modal-body">
+								선택한 강의를 수정하시겠습니까?
+							</div>
+							<div class="modal-footer flex">
+								<button type="button" class="btn-confirm mr-2">수정</button>
+								<button type="button" class="btn-cancel" data-dismiss="modal" aria-label="Close">취소</button>
+							</div>
+
+						</div><!--// modal-content -->
+					</div><!--// modal-dialog -->
+				</div><!--// modal -->
+
+				<!--  Modal content -->
+				<div id="modal06" class="modal alert fade">
+					<div class="modal-dialog modal-lg modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header flex_between">
+								<h5 class="modal-title mt-0">폴더 등록</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true" class="btn_close"></span>
+								</button>
+							</div>
+							<form class="movie_option_form" onSubmit="return false;" >
+								<input type="hidden"  />
+								<div class="modal-body">
+									<div class="form-group">
+										<div class="input_box">
+											<input type="text" placeholder="등록할 폴더명을 입력하세요" />
+										</div>
+									</div>
+								</div>
+							</form>
+							<div class="modal-footer">
+								<button type="button" class="btn-confirm waves-effect waves-light mr-2">저장</button>
+								<button type="button" class="btn-cancel waves-effect waves-light" data-dismiss="modal" aria-label="Close">취소</button>
+							</div>
+
+						</div><!--// modal-content -->
+					</div><!--// modal-dialog -->
+				</div><!--// modal -->
+
+				<!--  Modal content -->
+				<div id="modal07" class="modal alert fade">
+					<div class="modal-dialog modal-lg modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header flex_between">
+								<h5 class="modal-title mt-0">폴더 이동</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true" class="btn_close"></span>
+								</button>
+							</div>
+							<form class="movie_option_form" onSubmit="return false;" >
+								<input type="hidden"  />
+								<div class="modal-body modal-folder">
+									<div class="form-group flex_between">
+										<div class="w-50 mr-2">
+											<div class="input-group search_box02 flex_between">
+												<input type="search" class="search02" placeholder="이동할 폴더명을 입력하세요">
+												<button type="button" class="btn_search"><img src="./assets/images/common/icon_search.png" alt="돋보기"></button>
+											</div>
+										</div>
+										<div class="select_box w-50">
+											<label class="sr-only" for="school_type"></label>
+											<select id="school_type" class="form-control mr-sm-2 search_selected" name="search_school">
+												<option selected="selected" value="">새폴더</option>
+												<option value="">폴더 1</option>
+												<option value="">폴더 2</option>
+												<option value="">폴더 3</option>
+											</select>
+										</div>
+
+									</div>
+								</div>
+							</form>
+							<div class="modal-footer">
+								<button type="button" class="btn-confirm waves-effect waves-light mr-2">저장</button>
+								<button type="button" class="btn-cancel waves-effect waves-light" data-dismiss="modal" aria-label="Close">취소</button>
+							</div>
+
+						</div><!--// modal-content -->
+					</div><!--// modal-dialog -->
+				</div><!--// modal -->
+
+				<!--  Modal content for the above example -->
+				<div id="modal08" class="modal fade">
+					<div class="modal-dialog modal-xl modal-dialog-centered" style="max-width:1350px; padding:0 30px;">
+						<div class="modal-content">
+							<div class="modal-header flex_between">
+								<h5 class="modal-title mt-0">미리보기</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true" class="btn_close"></span>
+								</button>
+							</div>
+							<div class="modal-body share_modal_tab">
+								<ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+									<li class="nav-item pc">
+										<a class="nav-link active flex justify-content-center" data-toggle="tab" href="#tab-1" role="tab">
+											<span class="ico"></span>
+											<span class="d-none d-sm-block font-size-16">PC 미리보기</span>
+										</a>
+									</li>
+									<li class="nav-item mo">
+										<a class="nav-link flex justify-content-center" data-toggle="tab" href="#tab-2" role="tab">
+											<span class="ico"></span>
+											<span class="d-none d-sm-block font-size-16">Mobile 미리보기</span>
+										</a>
+									</li>
+								</ul>
+
+								<!-- Tab panes -->
+								<div class="tab-content p-3 text-muted">
+									<div class="tab-pane active" id="tab-1" role="tabpanel">
+										<div class="preview pc_box">
+											<header>
+												<h1 class="logo_p"><a href="javascript:void(0)"><img src="./assets/images/common/logo_1gram.png" alt="1gram"></a></h1>
+											</header>
+											<main>
+												<h2 class="title">운동이 뇌에 미치는 영향</h2>
+												<p class="desc mt-1">운동이 뇌에 미치는 영향에 대해 알아봅시다.</p>
+												<div class="video_wrap flex_between">
+													<div class="video mt-4">
+														<iframe src="https://www.youtube.com/embed/gBbPdb9cV64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+													</div>
+													<div class="video_txt">
+														<ul class="video_list">
+															<li>
+																<div class="video_img img_display active">
+																	<img src="./assets/images/common/sample03.png" alt="sample">
+																</div>
+																<div class="video_tit">
+																	<p>운동이 뇌에 미치는 영향</p>
+																</div>
+															</li>
+															<li>
+																<div class="video_img img_display active">
+																	<img src="./assets/images/common/sample03.png" alt="sample">
+																</div>
+																<div class="video_tit">
+																	<p>운동이 뇌에 미치는 영향</p>
+																</div>
+															</li>
+															<li>
+																<div class="video_img img_display active">
+																	<img src="./assets/images/common/sample03.png" alt="sample">
+																</div>
+																<div class="video_tit">
+																	<p>운동이 뇌에 미치는 영향</p>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>	
+												<div class="mt-4">
+													<p class="txt01">운동이 뇌에 미치는 영향</p>
+													<p class="txt02">운동이 뇌에 미치는 영향에 대해 알아봅시다.</p>
+												</div>
+											</main>
+											<footer>
+												&copy; 1gram.cc company all right reserved 2020.
+												<div class="btn_top_box">
+													<button type="button" class="btn_top"><img src="./assets/images/common/btn_top.png" alt="top"></button>
+												</div>
+											</footer>
+										</div>
+									</div>
+									<div class="tab-pane" id="tab-2" role="tabpanel">
+										<div class="preview mo_box">
+											<header>
+												<h1 class="logo_p"><a href="javascript:void(0)"><img src="./assets/images/common/logo_1gram.png" alt="1gram"></a></h1>
+											</header>
+											<main>
+												<h2 class="title">운동이 뇌에 미치는 영향</h2>
+												<p class="desc mt-1">운동이 뇌에 미치는 영향에 대해 알아봅시다.</p>
+												<div class="video_wrap flex_between">
+													<div class="video mt-4">
+														<iframe src="https://www.youtube.com/embed/gBbPdb9cV64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+													</div>
+													<div class="video_txt">
+														<ul class="video_list">
+															<li>
+																<div class="video_img img_display active">
+																	<img src="./assets/images/common/sample03.png" alt="sample">
+																</div>
+																<div class="video_tit">
+																	<p>운동이 뇌에 미치는 영향</p>
+																</div>
+															</li>
+															<li>
+																<div class="video_img img_display active">
+																	<img src="./assets/images/common/sample03.png" alt="sample">
+																</div>
+																<div class="video_tit">
+																	<p>운동이 뇌에 미치는 영향</p>
+																</div>
+															</li>
+															<li>
+																<div class="video_img img_display active">
+																	<img src="./assets/images/common/sample03.png" alt="sample">
+																</div>
+																<div class="video_tit">
+																	<p>운동이 뇌에 미치는 영향</p>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>	
+												<div class="mt-4">
+													<p class="txt01">운동이 뇌에 미치는 영향</p>
+													<p class="txt02">운동이 뇌에 미치는 영향에 대해 알아봅시다.</p>
+												</div>
+											</main>
+											<footer>
+												&copy; 1gram.cc company all right reserved 2020.
+												<div class="btn_top_box">
+													<button type="button" class="btn_top"><img src="./assets/images/common/btn_top.png" alt="top"></button>
+												</div>
+											</footer>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div><!--// modal-content -->
+					</div><!--// modal-dialog -->
+				</div><!--// modal -->
+
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+								&copy; 1gram.cc
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-right d-none d-sm-block">
+                                    Bubblecon
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="./assets/libs/jquery/jquery.min.js"></script>
+        <script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="./assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+		<script src="./assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+		<script src="./assets/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
+        <script src="./assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="./assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="./assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- apexcharts -->
+        <script src="./assets/libs/apexcharts/apexcharts.min.js"></script>
+        <script src="./assets/js/pages/dashboard.init.js"></script>
+        <script src="./assets/js/app.js"></script>
+
+        <!-- Plugins js -->
+        <script src="./assets/libs/dropzone/min/dropzone.min.js"></script>
+
+		<!-- Sweet Alerts js -->
+        <script src="./assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+        <!-- Sweet alert init js-->
+        <script src="./assets/js/pages/sweet-alerts.init.js"></script>
+
+		<script>
+			$(document).ready(function() {			
+				// top 버튼 상단으로
+				$(".btn_top").on("click", function() {
+					$(".preview").animate({scrollTop:0}, '500')
+				});
+			});
+		</script>
+
+    </body>
+</html>

@@ -1,0 +1,136 @@
+/* 웹폰트 - Noto Sans KR */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 100;
+	src: local('/assets/fonts/NotoSansKR-Thin'), local('/assets/fonts/NotoSansKR-Thin');
+	src: url(/assets/fonts/NotoSansKR-Thin.eot);
+	src: url(/assets/fonts/NotoSansKR-Thin.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/NotoSansKR-Thin.woff) format('woff'),
+		 url(/assets/fonts/NotoSansKR-Thin.woff2) format('woff2'),
+		 url(/assets/fonts/NotoSansKR-Thin.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 300;
+	src: local('/assets/fonts/NotoSansKR-Light'), local('/assets/fonts/NotoSansKR-Light');
+	src: url(/assets/fonts/NotoSansKR-Light.eot);
+	src: url(/assets/fonts/NotoSansKR-Light.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/NotoSansKR-Light.woff) format('woff'),
+		 url(/assets/fonts/NotoSansKR-Light.woff2) format('woff2'),
+		 url(/assets/fonts/NotoSansKR-Light.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	src: local('/assets/fonts/NotoSansKR-Regular'), local('/assets/fonts/NotoSansKR-Regular');
+	src: url(/assets/fonts/NotoSansKR-Regular.eot);
+	src: url(/assets/fonts/NotoSansKR-Regular.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/NotoSansKR-Regular.woff) format('woff'),
+		 url(/assets/fonts/NotoSansKR-Regular.woff2) format('woff2'),
+		 url(/assets/fonts/NotoSansKR-Regular.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 500;
+	src: local('/assets/fonts/NotoSansKR-Medium'), local('/assets/fonts/NotoSansKR-Medium');
+	src: url(/assets/fonts/NotoSansKR-Medium.eot);
+	src: url(/assets/fonts/NotoSansKR-Medium.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/NotoSansKR-Medium.woff) format('woff'),
+		 url(/assets/fonts/NotoSansKR-Medium.woff2) format('woff2'),
+		 url(/assets/fonts/NotoSansKR-Medium.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	src: local('/assets/fonts/NotoSansKR-Bold'), local('/assets/fonts/NotoSansKR-Bold');
+	src: url(/assets/fonts/NotoSansKR-Bold.eot);
+	src: url(/assets/fonts/NotoSansKR-Bold.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/NotoSansKR-Bold.woff) format('woff'),
+		 url(/assets/fonts/NotoSansKR-Bold.woff2) format('woff2'),
+		 url(/assets/fonts/NotoSansKR-Bold.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 900;
+	src: local('/assets/fonts/NotoSansKR-Black'), local('/assets/fonts/NotoSansKR-Black');
+	src: url(/assets/fonts/NotoSansKR-Black.eot);
+	src: url(/assets/fonts/NotoSansKR-Black.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/NotoSansKR-Black.woff) format('woff'),
+		 url(/assets/fonts/NotoSansKR-Black.woff2) format('woff2'),
+		 url(/assets/fonts/NotoSansKR-Black.otf) format('truetype');
+}       
+
+/* 웹폰트 - Poppins */
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 100;
+	src: local('/assets/fonts/Poppins-Thin'), local('/assets/fonts/Poppins-Thin');
+	src: url(/assets/fonts/Poppins-Thin.eot);
+	src: url(/assets/fonts/Poppins-Thin.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/Poppins-Thin.woff) format('woff'),
+		 url(/assets/fonts/Poppins-Thin.woff2) format('woff2'),
+		 url(/assets/fonts/Poppins-Thin.ttf) format('truetype');
+}  
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 300;
+	src: local('/assets/fonts/Poppins-Light'), local('/assets/fonts/Poppins-Light');
+	src: url(/assets/fonts/Poppins-Light.eot);
+	src: url(/assets/fonts/Poppins-Light.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/Poppins-Light.woff) format('woff'),
+		 url(/assets/fonts/Poppins-Light.woff2) format('woff2'),
+		 url(/assets/fonts/Poppins-Light.ttf) format('truetype');
+} 
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	src: local('/assets/fonts/Poppins-Regular'), local('/assets/fonts/Poppins-Regular');
+	src: url(/assets/fonts/Poppins-Regular.eot);
+	src: url(/assets/fonts/Poppins-Regular.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/Poppins-Regular.woff) format('woff'),
+		 url(/assets/fonts/Poppins-Regular.woff2) format('woff2'),
+		 url(/assets/fonts/Poppins-Regular.ttf) format('truetype');
+}  
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 500;
+	src: local('/assets/fonts/Poppins-Medium'), local('/assets/fonts/Poppins-Medium');
+	src: url(/assets/fonts/Poppins-Medium.eot);
+	src: url(/assets/fonts/Poppins-Medium.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/Poppins-Medium.woff) format('woff'),
+		 url(/assets/fonts/Poppins-Medium.woff2) format('woff2'),
+		 url(/assets/fonts/Poppins-Medium.ttf) format('truetype');
+}  
+
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700;
+	src: local('/assets/fonts/Poppins-Bold'), local('/assets/fonts/Poppins-Bold');
+	src: url(/assets/fonts/Poppins-Bold.eot);
+	src: url(/assets/fonts/Poppins-Bold.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/Poppins-Bold.woff) format('woff'),
+		 url(/assets/fonts/Poppins-Bold.woff2) format('woff2'),
+		 url(/assets/fonts/Poppins-Bold.ttf) format('truetype');
+}  
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 900;
+	src: local('/assets/fonts/Poppins-ExtraBold'), local('/assets/fonts/Poppins-ExtraBold');
+	src: url(/assets/fonts/Poppins-ExtraBold.eot);
+	src: url(/assets/fonts/Poppins-ExtraBold.eot?#iefix) format('embedded-opentype'),
+		 url(/assets/fonts/Poppins-ExtraBold.woff) format('woff'),
+		 url(/assets/fonts/Poppins-ExtraBold.woff2) format('woff2'),
+		 url(/assets/fonts/Poppins-ExtraBold.ttf) format('truetype');
+}  

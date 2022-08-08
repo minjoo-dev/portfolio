@@ -1,0 +1,43 @@
+/* layout */
+body {
+    min-width: 230px;
+    font-family: 'Mont', 'Noto', dotum ,"돋움" , AppleGothic, sans-serif; 
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+    color: #333;
+}
+.wrap {position: relative; z-index: 1;}
+.hidden {width: 0; height: 0; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px; position: absolute; left: -9999px; opacity: 0; visibility: hidden;}
+.section {max-width: 1200px; margin: 0 auto; text-align: center;}
+.section .inner {padding: 120px 0;}
+.section h3.title {position:relative; display: inline-block; margin-bottom: 50px; font-family: 'Jua', sans-serif; font-size: 50px;}
+.section h3.title:after {content: ''; position: absolute; left: 0; bottom: 10px; z-index: -1; width: 100%; height: 25px; background-color: #f8efae;}
+.sec-career h3.title:after {background-color: #fbc2a9;}
+.sec-works h3.title:after {background-color: #ffcac4;}
+
+/* popup */
+.modal {position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+.modal .dimm {width: 100%; height: 100%; background-color: rgba(0,0,0,.6);}
+.modal-content {position: absolute; width: 1080px; height: 500px; padding: 20px; overflow-y: auto;} 
+.modal.hide {display: none;}
+
+/* icon */
+.icon {display:inline-block; width: 19px; height: 19px; margin-right: 8px; background: no-repeat center; background-size: contain;}
+.icon-jquery {background-image: url('../images/icons/icon-jquery.png');}
+.icon-nexacro {background-image: url('../images/icons/icon-nexacro.png');}
+
+.fa-brands {font-size: 20px; margin-right: 8px;}
+.fa-vuejs {color: #41b883;}
+.fa-sass {color: #ce679a;}
+.fa-sourcetree {color: #0065ff;}
+.fa-slack {color: #481449;}
+.fa-html5 {color: #f1672c}
+.fa-css3-alt {color: #30a9dc}
+.fa-js-square {color: #efd81d;}
+.fa-figma {color: #222;}
+.fa-react {color: #00d8ff;}
+.fa-bootstrap {color: #62488a;}
+
+
+

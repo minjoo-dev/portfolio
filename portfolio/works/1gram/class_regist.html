@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <title>1Gram</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="./assets/images/common/1gram_favicon.ico">
+
+        <!-- Bootstrap Css -->
+        <link href="./assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="./assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="./assets/css/app.css" id="app-style" rel="stylesheet" type="text/css" />
+
+        <!-- Plugins css -->
+        <link href="./assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- Custom css -->
+		<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="javascript:void(0)" class="logo">
+                                <span class="logo-sm">
+                                    <img src="./assets/images/common/logo.svg" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="./assets/images/common/logo_1gram.png" alt="" height="39">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm header-item waves-effect" id="vertical-menu-btn">
+                            <span class="btn"><img src="./assets/images/common/icon_transfer_circle.png" alt="반응형 버튼"></span>
+                        </button>
+
+                        <div class="dropdown dropdown-mega d-none d-lg-block">
+                            <button type="button" class="btn header-item waves-effect header_menu active">
+                                <span key="t-megamenu" class="header_item">수업</span>
+                            </button>
+                            <button type="button" class="btn header-item waves-effect header_menu">
+                                <span key="t-megamenu" class="header_item">연구실</span>
+                            </button>
+                            <button type="button" class="btn header-item waves-effect header_menu">
+                                <span key="t-megamenu" class="header_item">나눔공간</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+						<div class="flex">
+							<div class="dropdown d-inline-block profile_box profile_box_a">
+								<button type="button" class="btn header-item noti-icon waves-effect alarm" id="page-header-notifications-dropdown"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<div class="btn_alarm">
+										<span class="img"><img src="./assets/images/common/icon_alarm.png" alt="알람"></span>
+										<span class="badge badge-danger badge-pill">3</span>
+									</div>
+								</button>
+								<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+									aria-labelledby="page-header-notifications-dropdown">
+									<div class="p-4 border-bottom">
+										<div class="row align-items-center">
+											<div class="col">
+												<h6 class="m-0" key="t-notifications"> 1gram.cc 알람메세지 </h6>
+											</div>
+										</div>
+									</div>
+									<div data-simplebar style="max-height: 230px;">
+										<a href="javascript:void(0)" class="text-reset notification-item">
+											<div class="media">
+												<div class="media-body">
+													<h6 class="mt-0 mb-1" key="t-your-order">알림 메시지 1</h6>
+													<div class="font-size-12 text-muted">
+														<p class="mb-1" key="t-grammer">알림 메시지입니다.</p>
+													</div>
+												</div>
+												<button type="button" class="btn">                
+													<i class="bx bx-x"></i>            
+												</button>  
+											</div>
+										</a>
+										<a href="javascript:void(0)" class="text-reset notification-item">
+											<div class="media">
+												<div class="media-body">
+													<h6 class="mt-0 mb-1" key="t-shipped">알림 메시지 2</h6>
+													<div class="font-size-12 text-muted">
+														<p class="mb-1" key="t-grammer">알림 메시지입니다.</p>
+													</div>
+												</div>
+												<button type="button" class="btn">                
+													<i class="bx bx-x"></i>            
+												</button>  
+											</div>
+										</a>
+									</div>
+									<div class="p-2 border-top">
+										<a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
+											<i class="mdi mdi-arrow-right-circle mr-1"></i> <span key="t-view-more">더보기</span> 
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="id d-inline-block profile_box profile_box_p">
+								<button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<img class="rounded-circle header-profile-user" src="./assets/images/common/icon_mypage.png" alt="프로필">
+									<div class="item_id d-none d-xl-inline-block" key="t-henry"><span>1gram</span>님</div>
+									<span class="item_arrow ml-3"><img src="./assets/images/common/icon_chevron_down.png" alt="화살표"></span>
+								</button>
+								<div class="dropdown-menu dropdown-menu-right">
+									<!-- item-->
+									<a class="dropdown-item " href="javascript:void(0)">
+										<i class="bx bx-user font-size-16 align-middle mr-1"></i>
+										<span key="t-profile">회원정보 수정</span>
+									</a>
+									<a class="dropdown-item " href="javascript:void(0)">
+										<i class="bx bx-help-circle font-size-16 align-middle mr-1"></i>
+										<span key="t-profile">고객 센터</span>
+									</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item text-danger" href="javascript:void(0)">
+										<i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
+										<span key="t-logout">로그아웃</span>
+									</a>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="vertical-menu">
+
+                <div data-simplebar class="h-100">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu" class="sidebar_menu">
+                        <!-- Left Menu Start -->
+                        <ul class="metismenu list-unstyled" id="side-menu">
+                            <li class="mm-active">
+                                <a href="javascript: void(0);" class="has-arrow waves-effect i_reg">
+                                    <span class="sidebar_icon"></span>
+                                    <span key="t-layouts">콘텐츠 등록</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect i_add">
+                                    <span class="sidebar_icon"></span>
+                                    <span key="t-multi-level">인터랙션 추가</span>
+                                </a>
+                            </li>
+							<li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect i_dis">
+                                    <span class="sidebar_icon"></span>
+                                    <span key="t-multi-level">배포하기</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+                </div>
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 font-size-18">
+										콘텐츠 등록
+										<span class="desc">수업을 구성할 콘텐츠를 등록합니다.</span>
+									</h4>
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0)"><span><img src="./assets/images/common/icon_home.png" alt="홈"></span></a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0)">수업</a></li>
+                                            <li class="breadcrumb-item active"><a href="javascript: void(0)">콘텐츠 등록</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+						<div class="checkout-tabs">
+							<div class="row">
+								<div class="col-xl-12 col-sm-12">
+									<div class="card class_pc" style="min-height:150%">
+										<div class="tab_wrap mt24">
+											<div class="tab-content" id="v-pills-tabContent">
+												<!-- tabs -->
+												<ul class="nav nav-pills nav-justified nav_box" role="tablist">
+													<li class="nav-item waves-effect waves-light tab_pc">
+														<a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab">
+															<span class="ico"></span>
+															<span class="txt">내 PC</span> 
+														</a>
+													</li>
+													<li class="nav-item waves-effect waves-light tab_yt">
+														<a class="nav-link" data-toggle="tab" href="#tab-2" role="tab">
+															<span class="ico"></span>
+															<span class="txt">Youtube</span> 
+														</a>
+													</li>
+													<li class="nav-item waves-effect waves-light tab_sh">
+														<a class="nav-link" data-toggle="tab" href="#tab-3" role="tab">
+															<span class="ico"></span>
+															<span class="txt">자료나눔</span> 
+														</a>
+													</li>
+												</ul>
+				
+												<!-- Tab panes -->
+												<div class="tab-content text-muted">
+													<!-- 내pc -->
+													<div class="tab-pane active" id="tab-1" role="tabpanel">
+														<p class="mb-0">
+															<div class="class_tab_cont" style="text-align:center">
+																<div>
+																	<form action="#" class="dropzone">
+																		<div class="fallback file_box">
+																			<input name="file" type="file" multiple="multiple">
+																		</div>
+																		<div class="dz-message needsclick">
+																			<div class="img">
+																				<img src="./assets/images/common/icon_search_circle.png" alt="upload">
+																			</div>
+																			
+																			<h4>업로드할 파일을 드래그 앤 드롭하세요.</h4>
+																			<button type="button" class="btn_b mt40">파일 선택</button>
+																		</div>
+																	</form>
+																</div>
+																<div class="info_desc mt40">
+																	최대 파일 크기 : 250Mbytemp4  I  권장 파일 포맷 : (h.264/avc)<br>
+																	권장 해상도 : HD(1280X720), Full HD(1920X1080)<br>
+																	그 외(avi, mpg, mov 등) 포맷은 변환 속도가 현저히 떨어질 수 있습니다.
+																</div>
+															</div>
+														</p>
+													</div>
+													<!--// 내pc -->
+
+													<!-- youtube -->
+													<div class="tab-pane" id="tab-2" role="tabpanel">
+														<p class="flex_between mt-4 mb-0">
+															<div class="youtube_data_search flex_between">
+																<div>
+																	<h5>Youtube 검색</h5>
+																</div>
+																<div class="form-inline">
+																	<div class="search-box search-box-youtube w-100">
+																		<div class="input-group">
+																			<input type="text" class="form-control mb-2 mr-2 searchbox-space" placeholder="검색어를 입력하세요">
+																			<div class="search_box">
+																				<button type="button" class="btn chat-send w-md waves-effect waves-light mb-2 search_ytb_btns">
+																					<span class="d-sm-inline-block ">검색</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="class_tab_cont" style="text-align:center">
+																<div class="dz-message needsclick">
+																	<div class="img">
+																		<img src="./assets/images/common/icon_search_circle.png" alt="찾기">
+																	</div>
+																	<h4>검색어를 입력하세요.</h4>
+																</div>
+																<div class="info_desc mt-3">
+																	검색을 통해, Youtube 콘텐츠를 확인 및 등록 할 수 있습니다.
+																</div>
+															</div>
+														</p>
+													</div>
+													<!--// youtube -->
+
+													<!-- 자료나눔 -->
+													<div class="tab-pane" id="tab-3" role="tabpanel">
+														<p class="mt-4 mb-0">
+                                                            <div class="row">
+                                                                <div class="col-md-12 col-9">
+                                                                    <form class="form-inline formSearchBox align-items-start" onsubmit="">
+                                                                        <input hidden="hidden">
+
+																		<div class="select_box">
+																			<label class="sr-only" for="school_type">학교선택</label>
+																			<select id="school_type" class="form-control mr-sm-2 mb-2 search_selected" name="search_school">
+																				<option selected="selected" value="">학교급</option>
+																				<option value="primary">초등학교</option>
+																				<option value="high">중/고등학교</option>
+																				<option value="all">공통</option>
+																			</select>
+																		</div>
+
+																		<div class="select_box">
+																			<label class="sr-only" for="grade_type">학년선택</label>
+																			<select id="grade_type" class="form-control mr-sm-2 mb-2 search_selected" name="search_grade">
+																				<option selected="selected" value="">학년</option>
+																				<option value="1">1학년</option>
+																				<option value="2">2학년</option>
+																				<option value="3">3학년</option>
+																				<option value="4">4학년</option>
+																				<option value="5">5학년</option>
+																				<option value="6">6학년</option>
+																				<option value="all">공통</option>
+																			</select>
+																		</div>
+
+																		<div class="select_box">
+																			<label class="sr-only" for="term_type">학기선택</label>
+																			<select id="term_type" class="form-control mr-sm-2 mb-2 search_selected" name="search_term">
+																				<option selected="selected" value="">학기</option>
+																				<option value="1">1학기</option>
+																				<option value="2">2학기</option>
+																				<option value="all">공통</option>
+																			</select>
+																		</div>
+
+																		<div class="select_box">
+																			<label class="sr-only" for="subject_type">교과선택</label>
+																			<select id="subject_type" class="form-control mr-sm-2 mb-2 search_selected" name="search_subject">
+																				<option selected="selected" value="">교과</option>
+																				<option value="kor">국어</option>
+																				<option value="eng">영어</option>
+																				<option value="math">수학</option>
+																				<option value="his">사회/역사/도덕</option>
+																				<option value="sci">과학</option>
+																				<option value="art">예술</option>
+																				<option value="ath">체육</option>
+																				<option value="tech">기술∙가정/제2외국어/한문/교양</option>
+																				<option value="etc">기타</option>
+																			</select>
+																		</div>
+
+                                                                        <div class="search-box">
+																			<div class="input-group">
+																				<input type="text" class="form-control mr-2 mb-2 searchbox-space" placeholder="검색어를 입력하세요">
+																				<div class="search_box mb-2">
+																					<button type="button" class="btn chat-send w-md waves-effect waves-light search_ytb_btns">
+																						<span class="d-sm-inline-block ">검색</span>
+																					</button>
+																				</div>
+																			</div>
+																		</div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+
+									
+															<div class="product mt-4">
+																<div class="item">
+																	<div class="item_body">
+																		<div class="product_img position-relative">
+																			<a href="javascript:void(0)">
+																				<div class="img_display"><img src="./assets/images/common/sample.jpg" alt="sample"></div>
+																			</a>
+																		</div>                  
+																		<div class="text-center product_txt_box" data-toggle="tooltip" data-placement="top" title="‘옛날에’를 설마 long long time ago라고 하시나요?">
+																			<div class="text-dark flex_between cursor_p" data-toggle="modal" data-target="#modal01">
+																				<h5 class="text-truncate product_tit">
+																					‘옛날에’를 설마 long long time ago라고 하시나요?
+																				</h5>
+																				<span><img src="./assets/images/common/icon_green_arrow_link.png" alt="화살표"></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item">
+																	<div class="item_body">
+																		<div class="product_img position-relative">
+																			<a href="javascript:void(0)">
+																				<div class="img_display"><img src="./assets/images/common/sample.jpg" alt="sample"></div>
+																			</a>
+																		</div>                  
+																		<div class="text-center product_txt_box" data-toggle="tooltip" data-placement="top" title="‘옛날에’를 설마 long long time ago라고 하시나요?">
+																			<div class="text-dark flex_between cursor_p" data-toggle="modal" data-target="#modal01">
+																				<h5 class="text-truncate product_tit">
+																					‘옛날에’를 설마 long long time ago라고 하시나요?
+																				</h5>
+																				<span><img src="./assets/images/common/icon_green_arrow_link.png" alt="화살표"></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item">
+																	<div class="item_body">
+																		<div class="product_img position-relative">
+																			<a href="javascript:void(0)">
+																				<div class="img_display"><img src="./assets/images/common/sample.jpg" alt="sample"></div>
+																			</a>
+																		</div>                  
+																		<div class="text-center product_txt_box" data-toggle="tooltip" data-placement="top" title="‘옛날에’를 설마 long long time ago라고 하시나요?">
+																			<div class="text-dark flex_between cursor_p" data-toggle="modal" data-target="#modal01">
+																				<h5 class="text-truncate product_tit">
+																					‘옛날에’를 설마 long long time ago라고 하시나요?
+																				</h5>
+																				<span><img src="./assets/images/common/icon_green_arrow_link.png" alt="화살표"></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item">
+																	<div class="item_body">
+																		<div class="product_img position-relative">
+																			<a href="javascript:void(0)">
+																				<div class="img_display"><img src="./assets/images/common/sample.jpg" alt="sample"></div>
+																			</a>
+																		</div>                  
+																		<div class="text-center product_txt_box" data-toggle="tooltip" data-placement="top" title="‘옛날에’를 설마 long long time ago라고 하시나요?">
+																			<div class="text-dark flex_between cursor_p" data-toggle="modal" data-target="#modal01">
+																				<h5 class="text-truncate product_tit">
+																					‘옛날에’를 설마 long long time ago라고 하시나요?
+																				</h5>
+																				<span><img src="./assets/images/common/icon_green_arrow_link.png" alt="화살표"></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item">
+																	<div class="item_body">
+																		<div class="product_img position-relative">
+																			<a href="javascript:void(0)">
+																				<div class="img_display"><img src="./assets/images/common/sample.jpg" alt="sample"></div>
+																			</a>
+																		</div>                  
+																		<div class="text-center product_txt_box" data-toggle="tooltip" data-placement="top" title="‘옛날에’를 설마 long long time ago라고 하시나요?">
+																			<div class="text-dark flex_between cursor_p" data-toggle="modal" data-target="#modal01">
+																				<h5 class="text-truncate product_tit">
+																					‘옛날에’를 설마 long long time ago라고 하시나요?
+																				</h5>
+																				<span><img src="./assets/images/common/icon_green_arrow_link.png" alt="화살표"></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item">
+																	<div class="item_body">
+																		<div class="product_img position-relative">
+																			<a href="javascript:void(0)">
+																				<div class="img_display"><img src="./assets/images/common/sample.jpg" alt="sample"></div>
+																			</a>
+																		</div>                  
+																		<div class="text-center product_txt_box" data-toggle="tooltip" data-placement="top" title="‘옛날에’를 설마 long long time ago라고 하시나요?">
+																			<div class="text-dark flex_between cursor_p" data-toggle="modal" data-target="#modal01">
+																				<h5 class="text-truncate product_tit">
+																					‘옛날에’를 설마 long long time ago라고 하시나요?
+																				</h5>
+																				<span><img src="./assets/images/common/icon_green_arrow_link.png" alt="화살표"></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item">
+																	<div class="item_body">
+																		<div class="product_img position-relative">
+																			<a href="javascript:void(0)">
+																				<div class="img_display"><img src="./assets/images/common/sample.jpg" alt="sample"></div>
+																			</a>
+																		</div>                  
+																		<div class="text-center product_txt_box" data-toggle="tooltip" data-placement="top" title="‘옛날에’를 설마 long long time ago라고 하시나요?">
+																			<div class="text-dark flex_between cursor_p" data-toggle="modal" data-target="#modal01">
+																				<h5 class="text-truncate product_tit">
+																					‘옛날에’를 설마 long long time ago라고 하시나요?
+																				</h5>
+																				<span><img src="./assets/images/common/icon_green_arrow_link.png" alt="화살표"></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item">
+																	<div class="item_body">
+																		<div class="product_img position-relative">
+																			<a href="javascript:void(0)">
+																				<div class="img_display"><img src="./assets/images/common/sample.jpg" alt="sample"></div>
+																			</a>
+																		</div>                  
+																		<div class="text-center product_txt_box" data-toggle="tooltip" data-placement="top" title="‘옛날에’를 설마 long long time ago라고 하시나요?">
+																			<div class="text-dark flex_between cursor_p" data-toggle="modal" data-target="#modal01">
+																				<h5 class="text-truncate product_tit">
+																					‘옛날에’를 설마 long long time ago라고 하시나요?
+																				</h5>
+																				<span><img src="./assets/images/common/icon_green_arrow_link.png" alt="화살표"></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item">
+																	<div class="item_body">
+																		<div class="product_img position-relative">
+																			<a href="javascript:void(0)">
+																				<div class="img_display"><img src="./assets/images/common/sample.jpg" alt="sample"></div>
+																			</a>
+																		</div>                  
+																		<div class="text-center product_txt_box" data-toggle="tooltip" data-placement="top" title="‘옛날에’를 설마 long long time ago라고 하시나요?">
+																			<div class="text-dark flex_between cursor_p" data-toggle="modal" data-target="#modal01">
+																				<h5 class="text-truncate product_tit">
+																					‘옛날에’를 설마 long long time ago라고 하시나요?
+																				</h5>
+																				<span><img src="./assets/images/common/icon_green_arrow_link.png" alt="화살표"></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item">
+																	<div class="item_body">
+																		<div class="product_img position-relative">
+																			<a href="javascript:void(0)">
+																				<div class="img_display"><img src="./assets/images/common/sample.jpg" alt="sample"></div>
+																			</a>
+																		</div>                  
+																		<div class="text-center product_txt_box" data-toggle="tooltip" data-placement="top" title="‘옛날에’를 설마 long long time ago라고 하시나요?">
+																			<div class="text-dark flex_between cursor_p" data-toggle="modal" data-target="#modal01">
+																				<h5 class="text-truncate product_tit">
+																					‘옛날에’를 설마 long long time ago라고 하시나요?
+																				</h5>
+																				<span><img src="./assets/images/common/icon_green_arrow_link.png" alt="화살표"></span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																
+															</div>
+														</p>
+
+														<ul class="pagination">
+															<li class="page_item">
+																<a href="javascript:void(0)" class="page_link arrow"><img src="./assets/images/common/ico_arrow_left_gray.png" alt=""></a>
+															</li>
+															<li class="page_item active">
+																<a href="javascript:void(0)" class="page_link">1</a>
+															</li>
+															<li class="page_item">
+																<a href="javascript:void(0)" class="page_link">2</a>
+															</li>
+															<li class="page_item">
+																<a href="javascript:void(0)" class="page_link">3</a>
+															</li>
+															<li class="page_item">
+																<a href="javascript:void(0)" class="page_link">4</a>
+															</li>
+															<li class="page_item">
+																<a href="javascript:void(0)" class="page_link">5</a>
+															</li>
+															<li class="page_item">
+																<a href="javascript:void(0)" class="page_link arrow"><img src="./assets/images/common/ico_arrow_right_gray.png" alt=""></a>
+															</li>
+														</ul>
+													</div>
+													<!--// 자료나눔-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+				<!--  Modal content -->
+				<div id="modal01" class="modal fade lecture_add_title">
+					<div class="modal-dialog modal-lg modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header flex_between">
+								<h5 class="modal-title mt-0">제목 입력</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true" class="btn_close"></span>
+								</button>
+							</div>
+							<form class="movie_option_form" onSubmit="return false;" >
+								<input type="hidden"  />
+								<div class="modal-body">
+									<div class="form-group">
+										<div class="input_box">
+											<input type="text" placeholder="강의 제목을 입력하세요" />
+										</div>
+									</div>
+								</div>
+							</form>
+							<div class="modal-footer">
+								<button type="button" class="waves-effect waves-light btnAddTitle btn_gr">인터렉션 추가하기</button>
+							</div>
+
+						</div><!--// modal-content -->
+					</div><!--// modal-dialog -->
+				</div><!--// modal -->
+
+
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+								&copy; 1gram.cc
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-right d-none d-sm-block">
+                                    Bubblecon
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- apexcharts -->
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <script src="assets/js/pages/dashboard.init.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <!-- Plugins js -->
+        <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+    </body>
+</html>

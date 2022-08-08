@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <title>1Gram</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="./assets/images/common/1gram_favicon.ico">
+
+        <!-- Bootstrap Css -->
+        <link href="./assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+		<link href="./assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Icons Css -->
+        <link href="./assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- Sweet Alert-->
+        <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App Css-->
+        <link href="./assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+
+        <!-- Plugins css -->
+        <link href="./assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- Custom css -->
+		<link href="./assets/css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="javascript:void(0)" class="logo">
+                                <span class="logo-sm">
+                                    <img src="./assets/images/common/logo.svg" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="./assets/images/common/logo_1gram.png" alt="" height="39">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm header-item waves-effect" id="vertical-menu-btn">
+                            <span class="btn"><img src="./assets/images/common/icon_transfer_circle.png" alt="반응형 버튼"></span>
+                        </button>
+
+                        <div class="dropdown dropdown-mega d-none d-lg-block">
+                            <button type="button" class="btn header-item waves-effect header_menu active">
+                                <span key="t-megamenu" class="header_item">수업</span>
+                            </button>
+                            <button type="button" class="btn header-item waves-effect header_menu">
+                                <span key="t-megamenu" class="header_item">연구실</span>
+                            </button>
+                            <button type="button" class="btn header-item waves-effect header_menu">
+                                <span key="t-megamenu" class="header_item">나눔공간</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+						<div class="flex">
+							<div class="dropdown d-inline-block profile_box profile_box_a">
+								<button type="button" class="btn header-item noti-icon waves-effect alarm" id="page-header-notifications-dropdown"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<div class="btn_alarm">
+										<span class="img"><img src="./assets/images/common/icon_alarm.png" alt="알람"></span>
+										<span class="badge badge-danger badge-pill">3</span>
+									</div>
+								</button>
+								<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+									aria-labelledby="page-header-notifications-dropdown">
+									<div class="p-4 border-bottom">
+										<div class="row align-items-center">
+											<div class="col">
+												<h6 class="m-0" key="t-notifications"> 1gram.cc 알람메세지 </h6>
+											</div>
+										</div>
+									</div>
+									<div data-simplebar style="max-height: 230px;">
+										<a href="javascript:void(0)" class="text-reset notification-item">
+											<div class="media">
+												<div class="media-body">
+													<h6 class="mt-0 mb-1" key="t-your-order">알림 메시지 1</h6>
+													<div class="font-size-12 text-muted">
+														<p class="mb-1" key="t-grammer">알림 메시지입니다.</p>
+													</div>
+												</div>
+												<button type="button" class="btn">                
+													<i class="bx bx-x"></i>            
+												</button>  
+											</div>
+										</a>
+										<a href="javascript:void(0)" class="text-reset notification-item">
+											<div class="media">
+												<div class="media-body">
+													<h6 class="mt-0 mb-1" key="t-shipped">알림 메시지 2</h6>
+													<div class="font-size-12 text-muted">
+														<p class="mb-1" key="t-grammer">알림 메시지입니다.</p>
+													</div>
+												</div>
+												<button type="button" class="btn">                
+													<i class="bx bx-x"></i>            
+												</button>  
+											</div>
+										</a>
+									</div>
+									<div class="p-2 border-top">
+										<a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
+											<i class="mdi mdi-arrow-right-circle mr-1"></i> <span key="t-view-more">더보기</span> 
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="id d-inline-block profile_box profile_box_p">
+								<button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<img class="rounded-circle header-profile-user" src="./assets/images/common/icon_mypage.png" alt="프로필">
+									<div class="item_id d-none d-xl-inline-block" key="t-henry"><span>1gram</span>님</div>
+									<span class="item_arrow ml-3"><img src="./assets/images/common/icon_chevron_down.png" alt="화살표"></span>
+								</button>
+								<div class="dropdown-menu dropdown-menu-right">
+									<!-- item-->
+									<a class="dropdown-item " href="javascript:void(0)">
+										<i class="bx bx-user font-size-16 align-middle mr-1"></i>
+										<span key="t-profile">회원정보 수정</span>
+									</a>
+									<a class="dropdown-item " href="javascript:void(0)">
+										<i class="bx bx-help-circle font-size-16 align-middle mr-1"></i>
+										<span key="t-profile">고객 센터</span>
+									</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item text-danger" href="javascript:void(0)">
+										<i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
+										<span key="t-logout">로그아웃</span>
+									</a>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="vertical-menu">
+
+                <div data-simplebar class="h-100">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu" class="sidebar_menu">
+                        <!-- Left Menu Start -->
+                        <ul class="metismenu list-unstyled" id="side-menu">
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect i_reg">
+                                    <span class="sidebar_icon"></span>
+                                    <span key="t-layouts">콘텐츠 등록</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect i_add">
+                                    <span class="sidebar_icon"></span>
+                                    <span key="t-multi-level">인터랙션 추가</span>
+                                </a>
+                            </li>
+							<li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect i_dis">
+                                    <span class="sidebar_icon"></span>
+                                    <span key="t-multi-level">배포하기</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+                </div>
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 font-size-18">
+										마이페이지
+									</h4>
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0)"><span><img src="./assets/images/common/icon_home.png" alt="홈"></span></a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0)">마이페이지</a></li>
+                                            <li class="breadcrumb-item active"><a href="javascript: void(0)">회원정보 수정</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+						<div class="row mt-4">
+							<div class="col-xl-12">
+								<div class="overflow-hidden">
+									<div class="bg_mypage">
+										<div class="row flex">
+											<div class="col-9">
+												<p class="text-white font-size-24 font-weight-bolder">회원정보 수정</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="mypage_wrap boder_gray">
+										<div class="row flex_between">
+											<div class="col-sm-3">
+												<div class="profile-user-wid mb-2">
+													<div class="profile-user-wid-inr rounded-circle file_box">
+														<label for="avatarProfile">
+															<span class="img_display rounded-circle"><img src="./assets/images/common/bg_myinfo.png" alt="profile" class="rounded-circle"></span>
+															<span class="ico_modi"><img src="./assets/images/common/icon_modify.png" alt="modify"></span>
+														</label>
+														<input type="file" class="profile_input" id="avatarProfile" name="avatar" accept=".jpg, .jpeg, .gif, .png">
+													</div>
+												</div>
+												<div class="profile-user-wid-txt">
+													<h5 class="font-size-20 mt-3"><span>teacher!!!!</span>님</h5>
+													<p class="font-size-14 fc_gray">teacher@1gram.cc</p>
+												</div>
+										
+												<div class="price-info-box mt-3">
+													<span>나의 요금제 : <span>FREE</span></span>
+													<i class="fas fa-chevron-right font-size-10"></i>
+													<div class="progress-wrap progress_box mt-3">
+														<div class="progress-txt">나의 용량 : <span>60GB</span> <span class="fc_gray">(30%)</span></div>
+														<div class="progress-box">
+															<div class="progress">
+																<div class="progress-bar progress-bar-animated font-size-12" role="progressbar" style="width: 30%;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">30%</div>
+															</div>
+														</div>
+													</div>
+													<div class="progress-wrap progress_box mt-3">
+														<div class="progress-txt">전송량 : <span>180GB</span> <span class="fc_gray">(10%)</span></div>
+														<div class="progress-box">
+															<div class="progress">
+																<div class="progress-bar progress-bar-animated font-size-12" role="progressbar" style="width: 10%;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">10%</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-sm-8">
+
+												<div class="form-group row mb-4">
+													<label for="horizontal-email-input" class="col-sm-3 col-form-label">이메일</label>
+													<div class="col-sm-9">
+														<input class="form-control" type="text" value="teacher@1gram.cc"/>
+													</div>
+												</div>
+												<div class="form-group row mb-4">
+													<label for="horizontal-firstname-input" class="col-sm-3 col-form-label">기존 비밀번호</label>
+													<div class="col-sm-9">
+														<input class="form-control" type="text" placeholder="정보보호를 위해 기존 비밀번호를 입력하세요"/>
+													</div>
+												</div>
+												<div class="form-group row mb-4">
+													<label for="horizontal-firstname-input" class="col-sm-3 col-form-label">변경할 비밀번호</label>
+													<div class="col-sm-9">
+														<input class="form-control" type="text" placeholder="정보보호를 위해 기존 비밀번호를 입력하세요"/>
+													</div>
+												</div>
+												<div class="form-group row mb-4">
+													<label for="horizontal-firstname-input" class="col-sm-3 col-form-label">비밀번호 확인</label>
+													<div class="col-sm-9">
+														<input class="form-control" type="text" placeholder="보안을 위해 입력하신 비밀번호를 확인해주세요"/>
+													</div>
+												</div>
+
+												<div class="form-group row mb-4">
+													<label for="horizontal-email-input" class="col-sm-3 col-form-label">소속학교</label>
+													<div class="col-sm-9">
+														<div class="select_box mypage_select">
+															<div class="btn-group">
+																<button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																	학교 <span class="drop_btn"><img src="./assets/images/common/icon_chevron_down_space.png" alt=""></span>
+																</button>
+																<div class="dropdown-menu">
+																	<div class="input_box">
+																		<label class="font-size-16 mb-2">검색할 학교명을 입력하세요.</label>
+																		<input type="text">
+																	</div>
+																</div>
+															</div>
+														</div>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group row mt-5">
+											<div class="col-md-12 distribute-btn-box" style="text-align: center">
+												<button type="button" class="btn-cancel">취소</button>
+												<button type="button" class="btn-modify">수정</button>
+											</div>
+										</div>
+									</div> <!--// mypage wrap -->
+								</div>
+							</div>
+						</div> 
+						
+                    </div>
+                </div>
+                <!-- End Page-content -->
+
+				<!--  Modal content -->
+				<div id="modal01" class="modal fade lecture_add_title">
+					<div class="modal-dialog modal-lg modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header flex_between">
+								<h5 class="modal-title mt-0">제목 입력</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true" class="btn_close"></span>
+								</button>
+							</div>
+							<form class="movie_option_form" onSubmit="" >
+								<input type="hidden"  />
+								<div class="modal-body">
+									<div class="form-group">
+										<div class="input_box">
+											<input type="text" placeholder="제목을 입력하세요" />
+										</div>
+									</div>
+								</div>
+							</form>
+							<div class="modal-footer">
+								<button type="button" class="waves-effect waves-light btnAddTitle btn_gr">인터렉션 추가하기</button>
+							</div>
+
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+
+
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+								&copy; 1gram.cc
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-sm-right d-none d-sm-block">
+                                    Bubblecon
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- JAVASCRIPT -->
+        <script src="./assets/libs/jquery/jquery.min.js"></script>
+        <script src="./assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="./assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+		<script src="./assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+		<script src="./assets/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
+        <script src="./assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="./assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="./assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- apexcharts -->
+        <script src="./assets/libs/apexcharts/apexcharts.min.js"></script>
+        <script src="./assets/js/pages/dashboard.init.js"></script>
+        <script src="./assets/js/app.js"></script>
+
+        <!-- Plugins js -->
+        <script src="./assets/libs/dropzone/min/dropzone.min.js"></script>
+
+		<!-- Sweet Alerts js -->
+        <script src="./assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+        <!-- Sweet alert init js-->
+        <script src="./assets/js/pages/sweet-alerts.init.js"></script>
+    </body>
+</html>

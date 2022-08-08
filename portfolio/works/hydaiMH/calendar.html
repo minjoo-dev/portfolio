@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script>
+		var $date = {};
+			$date.year   = "";
+			$date.month  = "";
+			$date.day    = "";
+		var $event = {};
+			$event.data = null;
+		
+		var $calendar = {};
+			$calendar.type ="box";
+	</script>
+	<script src="js/calendar.js"></script>
+<!-- 	<script type="text/javascript" src="js/calendar.js"></script> -->
+    <title>현대 M/H 관리시스템</title>
+</head>
+<body class="bg-gray">
+    <div class="wrap">
+       <header class="header">
+           <div class="header-box">
+               <button class="icon icon-menu" type="button"></button>
+               <h1>개인별 MH 관리</h1>
+               <div class="btn-alarm-box">
+                   <button class="icon icon-alarm" type="button"></button>
+                   <span class="num">2</span>
+               </div>
+           </div>
+           <div class="sidemenu">
+               <div class="sidemenu-inner">
+                   <div class="logo"><img src="./images/logo-hyundai.png" alt="HYUNDAI"></div>
+                   <div class="myinfo-img"></div>
+                   <div class="myinfo-name">
+                       <span>김00님 </span>안녕하세요
+                   </div>
+                   <p class="myinfo-email">admin@hyundai.com</p>
+				   <ul class="gnb">
+					   <li><a href="./list.html">연구과제관리</a></li>
+					   <li><a href="./personal.html">개인별 수행과제관리</a></li>
+					   <li><a href="./calendar.html">개인별 M/H 관리</a></li>
+					   <li><a href="javascript:void(0)">부서별 M/H 관리</a></li>
+					   <li><a href="./team.html">부서 결재 관리</a></li>
+				   </ul>
+                   <a href="javascript:void(0)" class="btn-logout">Logout</a>
+               </div>
+           </div>
+           <div class="overlay"></div>
+       </header>
+        <main>
+            <div class="calendar-wrap">
+				
+                <div class="calendar-head">
+                    <button type="button" class="cal-prevBtn"></button>
+					<div class="Now-year-day" id="Now-year-day"></div>
+					<button type="button" class="cal-nextBtn"></button>
+                </div>
+				<div class="small-calendar">
+					<div class='work-small-cal'>
+						<input type="text" id="startDate">
+						<input type="text" id="endDate">
+					</div>
+					<button type="button" class="work-append-btn js-MH-append">MH등록</button>
+				</div>
+                <div class="calendar-container">
+                    <div class="cal-day-head cal-thead">
+                        <div class="cal-row">
+                            <dl class="cal-col">
+                                <dt>일</dt>
+                            </dl>
+                            <dl class="cal-col">
+                                <dt>월</dt>
+                            </dl>
+                            <dl class="cal-col">
+                                <dt>화</dt>
+                            </dl>
+                            <dl class="cal-col">
+                                <dt>수</dt>
+                            </dl>
+                            <dl class="cal-col">
+                                <dt>목</dt>
+                            </dl>
+                            <dl class="cal-col">
+                                <dt>금</dt>
+                            </dl>
+                            <dl class="cal-col">
+                                <dt>토</dt>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="cal-day-num cal-tbody">
+						<ul id="calendarDayBox"></ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+	<div class="layer-popup-wrap" id="MH-list-pop">
+		<div class="layer-dimm js-close"></div>
+		<div class="layer-pop-inr">
+			<div class="MH-list-container">
+				<div class="MH-title">
+					<div class="choose-day">2022-01-21</div><button type="button" class="layer-close js-close"></button>
+				</div>
+				<div class="MH-list-wrap">
+					<ul id="MH-list-append">
+						<li class="MH-list">
+							<div class="MH-head">
+								<div class="MH-workTime MH-round">근무</div>
+								<div class="MH-prg-time MH-round"><span class="hour">10</span><span>:</span><span class="minutes">50</span></div>
+							</div>
+							<div class="MH-prj-name">중대형 플랫폼 설계 점검을 위한 서스펜션</div>
+						</li>
+						<li class="MH-list">
+							<div class="MH-head">
+								<div class="MH-prj-code MH-round">HR-999999</div>
+								<div class="MH-prg-time MH-round"><span class="hour">10</span><span>:</span><span class="minutes">50</span></div>
+							</div>
+							<div class="MH-prj-name">중대형 플랫폼 설계 점검을 위한 서스펜션</div>
+						</li>
+						<li class="MH-list">
+							<div class="MH-head">
+								<div class="MH-prj-code MH-round">HR-999999</div>
+								<div class="MH-prg-time MH-round"><span class="hour">10</span><span>:</span><span class="minutes">50</span></div>
+							</div>
+							<div class="MH-prj-name">중대형 플랫폼 설계 점검을 위한 서스펜션</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="layer-popup-wrap" id="MH-append-work-pop">
+		<div class="layer-dimm js-close"></div>
+		<div class="layer-pop-inr">
+			<div class="MH-list-container">
+				<div class="MH-title">
+					<div class="choose-day">2022-01-21</div><button type="button" class="layer-close js-close"></button>
+				</div>
+				<div class="MH-list-wrap">
+					<ul id="MH-append-work">
+						<li class="MH-list">
+							<div class="MH-head MH-workList">
+								<div class="MH-workTime MH-round">근무</div>
+								<div class="MH-work-seletor">
+									<div class="MH-work-hour">
+										<select>
+											<option value="">00</option>
+											<option value="">01</option>
+											<option value="">02</option>
+											<option value="">03</option>
+											<option value="">04</option>
+											<option value="">05</option>
+											<option value="">06</option>
+											<option value="">07</option>
+											<option value="">08</option>
+											<option value="">09</option>
+											<option value="">10</option>
+											<option value="">11</option>
+											<option value="">12</option>
+											<option value="">13</option>
+											<option value="">14</option>
+											<option value="">15</option>
+											<option value="">16</option>
+											<option value="">17</option>
+											<option value="">18</option>
+											<option value="">19</option>
+											<option value="">20</option>
+											<option value="">21</option>
+											<option value="">22</option>
+											<option value="">23</option>
+										</select>
+										<span>시</span>
+									</div>
+									<div class="MH-work-min">
+										<select name="" id="">
+											<option value="">00</option>
+											<option value="">15</option>
+											<option value="">30</option>
+											<option value="">45</option>
+										</select>
+										<span>분</span>
+									</div>
+								</div>
+							</div>
+							<div class="MH-prj-name">중대형 플랫폼 설계 점검을 위한 서스펜션</div>
+						</li>
+						<li class="MH-list">
+							<div class="MH-head MH-workList">
+								<div class="MH-prj-code MH-round">HR-999999</div>
+								<div class="MH-work-seletor">
+									<div class="MH-work-hour">
+										<select>
+											<option value="">00</option>
+											<option value="">01</option>
+											<option value="">02</option>
+											<option value="">03</option>
+											<option value="">04</option>
+											<option value="">05</option>
+											<option value="">06</option>
+											<option value="">07</option>
+											<option value="">08</option>
+											<option value="">09</option>
+											<option value="">10</option>
+											<option value="">11</option>
+											<option value="">12</option>
+											<option value="">13</option>
+											<option value="">14</option>
+											<option value="">15</option>
+											<option value="">16</option>
+											<option value="">17</option>
+											<option value="">18</option>
+											<option value="">19</option>
+											<option value="">20</option>
+											<option value="">21</option>
+											<option value="">22</option>
+											<option value="">23</option>
+										</select>
+										<span>시</span>
+									</div>
+									<div class="MH-work-min">
+										<select name="" id="">
+											<option value="">00</option>
+											<option value="">15</option>
+											<option value="">30</option>
+											<option value="">45</option>
+										</select>
+										<span>분</span>
+									</div>
+								</div>
+							</div>
+							<div class="MH-prj-name">중대형 플랫폼 설계 점검을 위한 서스펜션</div>
+						</li>
+					</ul>
+				</div>
+				<div class="MH-list-footer">
+					<button type="button" class="MH-btn cancel js-close">취소</button>
+					<button type="button" class="MH-btn save">저장</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+/* 웹폰트 - Noto Sans KR */
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 100;
+	src: local('../font/NotoSansKR-Thin'), local('../font/NotoSansKR-Thin');
+	src: url(../font/NotoSansKR-Thin.eot);
+	src: url(./font/NotoSansKR-Thin.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Thin.woff) format('woff'),
+		 url(../font/NotoSansKR-Thin.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Thin.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 300;
+	src: local('../font/NotoSansKR-Light'), local('../font/NotoSansKR-Light');
+	src: url(../font/NotoSansKR-Light.eot);
+	src: url(../font/NotoSansKR-Light.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Light.woff) format('woff'),
+		 url(../font/NotoSansKR-Light.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Light.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 400;
+	src: local('../font/NotoSansKR-Regular'), local('../font/NotoSansKR-Regular');
+	src: url(../font/NotoSansKR-Regular.eot);
+	src: url(../font/NotoSansKR-Regular.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Regular.woff) format('woff'),
+		 url(../font/NotoSansKR-Regular.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Regular.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 500;
+	src: local('../font/NotoSansKR-Medium'), local('../font/NotoSansKR-Medium');
+	src: url(../font/NotoSansKR-Medium.eot);
+	src: url(../font/NotoSansKR-Medium.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Medium.woff) format('woff'),
+		 url(../font/NotoSansKR-Medium.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Medium.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 700;
+	src: local('../font/NotoSansKR-Bold'), local('../font/NotoSansKR-Bold');
+	src: url(../font/NotoSansKR-Bold.eot);
+	src: url(../font/NotoSansKR-Bold.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Bold.woff) format('woff'),
+		 url(../font/NotoSansKR-Bold.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Bold.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans KR';
+	font-style: normal;
+	font-weight: 900;
+	src: local('../font/NotoSansKR-Black'), local('../font/NotoSansKR-Black');
+	src: url(../font/NotoSansKR-Black.eot);
+	src: url(../font/NotoSansKR-Black.eot?#iefix) format('embedded-opentype'),
+		 url(../font/NotoSansKR-Black.woff) format('woff'),
+		 url(../font/NotoSansKR-Black.woff2) format('woff2'),
+		 url(../font/NotoSansKR-Black.otf) format('truetype');
+}       
+
+/* 웹폰트 - 명조 */
+@font-face {
+	font-family: 'H2MJRE';
+	font-style: normal;
+	font-weight: 900;
+	src: local('../font/H2MJRE'), local('../font/H2MJRE');
+	src: url(../font/H2MJRE.eot);
+	src: url(../font/H2MJRE.eot?#iefix) format('embedded-opentype'),
+		 url(../font/H2MJRE.woff) format('woff'),
+		 url(../font/H2MJRE.woff2) format('woff2'),
+		 url(../font/H2MJRE.ttf) format('truetype');
+}           

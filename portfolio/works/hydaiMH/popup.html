@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
+    <title>현대 M/H 관리시스템</title>
+</head>
+<body class="m_body">
+    <div class="overlay"></div>
+    <div class="sidemenu">
+        <div class="sidemenu-inner">
+            <div class="logo"><img src="./images/logo-hyundai.png" alt="HYUNDAI"></div>
+            <div class="myinfo-img"></div>
+            <div class="myinfo-name">
+                <span>김00님 </span>안녕하세요
+            </div>
+            <p class="myinfo-email">admin@hyundai.com</p>
+            <ul class="gnb">
+                <li><a href="./list.html">연구과제관리</a></li>
+                <li><a href="./personal.html">개인별 수행과제관리</a></li>
+                <li><a href="./calendar.html">개인별 M/H 관리</a></li>
+                <li><a href="javascript:void(0)">부서별 M/H 관리</a></li>
+                <li><a href="./team.html">부서 결재 관리</a></li>
+            </ul>
+            <a href="javascript:void(0)" class="btn-logout">Logout</a>
+        </div>
+    </div>
+    <div class="wrap">
+        <header class="header">
+            <div class="header-box">
+                <button class="icon icon-menu" type="button"></button>
+                <h1>부서 결재 관리</h1>
+                <div class="btn-alarm-box">
+                    <button class="icon icon-alarm" type="button"></button>
+                    <span class="num">2</span>
+                </div>
+            </div>
+            <div class="tab-menu-wrap">
+                <div class="inner">
+                    <ul class="tab-menu">
+                        <li class="active"><a href="javascript:void(0)">프로젝트별</a></li>
+                        <li><a href="javascript:void(0)">인원별</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="divView1" class="inner">
+                <div class="formbox">
+                    <span class="label-tit">년/월</span>
+                    <div class="formbox-1_1">
+                        <span class="textbox"><input name="year" disabled=""></span>
+                        <span class="selectbox">
+							<select id="mon" name="mon">
+								<option value="01">1</option>
+							</select>
+						</span>
+                    </div>
+                </div>
+                <div class="formbox">
+                    <span class="label-tit">총 MH입력시간/총 근태입력시간</span>
+                    <div class="formbox-1_1">
+                        <span class="textbox"><input name="totalPrjMH" type="text" disabled=""></span>
+                        <span class="textbox"><input name="totalStdaz" type="text" disabled=""></span>
+                    </div>
+                </div>
+                <div name="apprvStat" style="color:red;">결재가 완료되지 않은 팀 입니다.</div>
+                <div class="btn-right-wrap">
+                    <button class="btn btn-popup-open">결재</button>
+                </div>
+            </div>
+        </header>
+        <div class="popup-dimm"></div>
+        <div class="popup">
+            <div class="popup-inr">
+                <div class="img-area"><img src="./images/popup-check.png" alt="check"></div>
+                <div class="txt-area">
+                    <p>결재를 하시겠습니까?</p>
+                </div>
+                <div class="button-area">
+                    <button type="button" class="btn btn-confirm">확인</button>
+                    <button type="button" class="btn btn-cancel">취소</button>
+                </div>
+                <button type="button" class="icon icon-close-popup"></button>
+            </div>
+        </div>
+
+<!--        <div class="popup">-->
+<!--            <div class="popup-inr">-->
+<!--                <div class="img-area"><img src="./images/popup-confirm.png" alt="confirm"></div>-->
+<!--                <div class="txt-area">-->
+<!--                    <p>부서결제가 등록되었습니다.</p>-->
+<!--                </div>-->
+<!--                <div class="button-area">-->
+<!--                    <button type="button" class="btn btn-confirm">확인</button>-->
+<!--                </div>-->
+<!--                <button type="button" class="icon icon-close-popup"></button>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</body>
+</html>

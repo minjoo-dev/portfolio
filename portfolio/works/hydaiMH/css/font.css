@@ -1,0 +1,37 @@
+/* Hyundai Sans KR */
+@font-face {
+    font-family: 'hyundaiSansKR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../font/HyundaiSansHeadKRLight.eot);
+    src: url(../font/HyundaiSansHeadKRLight.eot?#iefix) format('embedded-opentype'),
+    url(../font/HyundaiSansHeadKRLight.woff) format('woff'),
+    url(../font/HyundaiSansHeadKRLight.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'hyundaiSansKR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/HyundaiSansHeadKRRegular.eot);
+    src: url(../font/HyundaiSansHeadKRRegular.eot?#iefix) format('embedded-opentype'),
+    url(../font/HyundaiSansHeadKRRegular.woff) format('woff'),
+    url(../font/HyundaiSansHeadKRRegular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'hyundaiSansKR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../font/HyundaiSansHeadKRMedium.eot);
+    src: url(../font/HyundaiSansHeadKRMedium.eot?#iefix) format('embedded-opentype'),
+    url(../font/HyundaiSansHeadKRMedium.woff) format('woff'),
+    url(../font/HyundaiSansHeadKRMedium.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'hyundaiSansKR';
+    font-style: normal;
+    font-weight: 600;
+    src: url(../font/HyundaiSansHeadKRBold.eot);
+    src: url(../font/HyundaiSansHeadKRBold.eot?#iefix) format('embedded-opentype'),
+    url(../font/HyundaiSansHeadKRBold.woff) format('woff'),
+    url(../font/HyundaiSansHeadKRBold.ttf) format('truetype');
+}
