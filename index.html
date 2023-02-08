@@ -9,7 +9,6 @@
     <meta property="og:url" content="minjoopark.com"> 
     <meta property="og:description" content="박민주의 포트폴리오입니다."> 
     <meta property="og:image" content="images/parkminjoo.jpg">
-
     <link rel="icon" href="images/favicon.ico"/>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font.css">
@@ -18,53 +17,13 @@
     <link rel="stylesheet" href="css/scrolling.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/scrolling.js"></script>
-    <script src="js/MorphSVGPlugin.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="js/MorphSVGPlugin.js"></script>
+    <script src="js/scrolling.js"></script>
+    <script src="js/scripts.js"></script>
 </head>
 <body>
-    <div class="bg-grey-lighter">
-        <div id="blobs" class="fixed pin w-full h-full z-0 transition-transform-long transform_chrome">
-            <div id="archive" class="flex items-center justify-center relative">
-                <div id="color1" class="absolute flex items-center justify-center z-1 w-150vw h-140vh transition-all text-red-dark">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="none" id="blob-archive" class="block fill-current w-full h-full transition-transform">
-                        <path id="blob-1f" d="M412.31,66.64c-50-22.75-140.73-48.18-197-60.64C46.52-31.44-15,113.54,3,242.26,22.47,381.33,94.83,538.83,277.31,491.38,386.7,463,457.82,322.37,494.38,229,515,161.18,477,96.06,412.31,66.64Z"></path>
-                        <path id="blob-1e" d="M476.23,131.25c-30.68-65.49-100.57-86-164.87-105.46-68-20.57-130.78-44.67-196.18-2.63C16.57,86.55-41.48,301.1,35.55,397.29c71.53,89.33,215.34,132.57,322.25,79.77C483.36,415.06,534,254.56,476.23,131.25Z"></path>
-                        <path id="blob-1d" d="M321.28,496.61C517.49,478.21,535.13,274,455.9,133.26c-53.48-95-151.1-161.1-267.74-121.63C123.74,33.43,79,82.31,59,144.26,39.08,205.81-2.88,292.21.16,356.51,7.67,515.32,200.67,503.48,321.28,496.61Z"></path>
-                        <path id="blob-1c" d="M488.38,220.92C442.41,106.12,402.54-33.2,245.79,7.1,175.25,25.24,143.91,79.33,96.57,128.29,44.25,182.4-.2,222.77,0,305.44.8,638.23,589.2,500,488.38,220.82Z"></path>
-                        <path id="blob-1b" d="M499.82,156.85C503.5,84.11,450.43,28,380,13.94,325.51,3.08,230.53-.78,172.45.13-1.9,2.84-26.84,162.54,22.09,287.06c52.87,134.52,162,274.9,329.08,184C451.33,416.59,486.75,259,499.82,156.85Z"></path>
-                        <path id="blob-1a" d="M492.06,339.89c-26.12-69.39,8.09-133.74-11-198.75C460.87,72.48,385.61,51,325.23,24.7,170.29-42.7,43,32.36,10.29,194.84-15.94,325.1-.54,459.52,158.19,487.06,264.79,505.55,551.11,532.77,492.06,339.89Z" data-original="M492.06,339.89c-26.12-69.39,8.09-133.74-11-198.75C460.87,72.48,385.61,51,325.23,24.7,170.29-42.7,43,32.36,10.29,194.84-15.94,325.1-.54,459.52,158.19,487.06,264.79,505.55,551.11,532.77,492.06,339.89Z"></path>
-                    </svg>
-                </div>
-            </div>
-            <div id="menu" class="flex items-center justify-center relative antialiased">
-                <div id ="color2" class="absolute flex items-center justify-center w-150vw h-130vh transition-all text-yellow">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="none" id="blob-menu" class="block w-full h-full fill-current transition-transform">
-                        <path id="blob-2f" d="M23.77,368.75c30.68,65.49,100.57,86,164.87,105.46,68,20.57,130.78,44.67,196.18,2.63,98.61-63.39,156.66-277.94,79.63-374.13C392.92,13.38,249.11-29.86,142.2,22.94,16.64,84.94-34,245.44,23.77,368.75Z"></path>
-                        <path id="blob-2e" d="M178.72,3.39C-17.49,21.79-35.13,226,44.1,366.74c53.48,95,151.1,161.1,267.74,121.63C376.26,466.57,421,417.69,441,355.74c19.92-61.55,61.88-148,58.84-212.25C492.33-15.32,299.33-3.48,178.72,3.39Z"></path>
-                        <path id="blob-2d" d="M11.62,279.08c46,114.8,85.84,254.12,242.59,213.82,70.54-18.14,101.88-72.23,149.22-121.19C455.75,317.6,500.2,277.23,500,194.56,499.2-138.23-89.2,0,11.62,279.18Z"></path>
-                        <path id="blob-2c" d="M.18,343.15C-3.5,415.89,49.57,472,120,486.06c54.49,10.86,149.47,14.72,207.55,13.81,174.35-2.71,199.29-162.41,150.36-286.93C425,78.42,315.91-62,148.83,28.94,48.67,83.41,13.25,241,.18,343.15Z"></path>
-                        <path id="blob-2b" d="M7.94,160.11c26.12,69.39-8.09,133.74,11,198.75C39.13,427.52,114.39,449,174.77,475.3,329.71,542.7,457,467.64,489.71,305.16,515.94,174.9,500.54,40.48,341.81,12.94,235.21-5.55-51.11-32.77,7.94,160.11Z"></path>
-                        <path id="blob-2a" d="M87.69,433.36c50,22.75,140.73,48.18,197,60.64C453.48,531.44,515,386.46,497,257.74,477.53,118.67,405.17-38.83,222.69,8.62,113.3,37.05,42.18,177.63,5.62,271-15,338.82,23.05,403.94,87.69,433.36Z" data-original="M87.69,433.36c50,22.75,140.73,48.18,197,60.64C453.48,531.44,515,386.46,497,257.74,477.53,118.67,405.17-38.83,222.69,8.62,113.3,37.05,42.18,177.63,5.62,271-15,338.82,23.05,403.94,87.69,433.36Z"></path>
-                    </svg>
-                </div>
-            </div>
-            <div id="contact" class="flex items-center justify-center relative z-2">
-                <div id="color3" class="absolute flex items-center justify-center w-150vw h-130vh transition-all text-blue-dark">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="none" id="blob-contact" class="block fill-current w-full h-full transition-transform">
-                        <path id="blob-3f" d="M488.38,220.92C442.41,106.12,402.54-33.2,245.79,7.1,175.25,25.24,143.91,79.33,96.57,128.29,44.25,182.4-.2,222.77,0,305.44.8,638.23,589.2,500,488.38,220.82Z"></path>
-                        <path id="blob-3e" d="M499.82,156.85C503.5,84.11,450.43,28,380,13.94,325.51,3.08,230.53-.78,172.45.13-1.9,2.84-26.84,162.54,22.09,287.06c52.87,134.52,162,274.9,329.08,184C451.33,416.59,486.75,259,499.82,156.85Z"></path>
-                        <path id="blob-3d" d="M492.06,339.89c-26.12-69.39,8.09-133.74-11-198.75C460.87,72.48,385.61,51,325.23,24.7,170.29-42.7,43,32.36,10.29,194.84-15.94,325.1-.54,459.52,158.19,487.06,264.79,505.55,551.11,532.77,492.06,339.89Z"></path>
-                        <path id="blob-3c" d="M412.31,66.64c-50-22.75-140.73-48.18-197-60.64C46.52-31.44-15,113.54,3,242.26,22.47,381.33,94.83,538.83,277.31,491.38,386.7,463,457.82,322.37,494.38,229,515,161.18,477,96.06,412.31,66.64Z"></path>
-                        <path id="blob-3b" d="M476.23,131.25c-30.68-65.49-100.57-86-164.87-105.46-68-20.57-130.78-44.67-196.18-2.63C16.57,86.55-41.48,301.1,35.55,397.29c71.53,89.33,215.34,132.57,322.25,79.77C483.36,415.06,534,254.56,476.23,131.25Z"></path>
-                        <path id="blob-3a" d="M321.28,496.61C517.49,478.21,535.13,274,455.9,133.26c-53.48-95-151.1-161.1-267.74-121.63C123.74,33.43,79,82.31,59,144.26,39.08,205.81-2.88,292.21.16,356.51,7.67,515.32,200.67,503.48,321.28,496.61Z" data-original="M321.28,496.61C517.49,478.21,535.13,274,455.9,133.26c-53.48-95-151.1-161.1-267.74-121.63C123.74,33.43,79,82.31,59,144.26,39.08,205.81-2.88,292.21.16,356.51,7.67,515.32,200.67,503.48,321.28,496.61Z"></path>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="effect-wrap">
+    <div class="effect-wrap">
         <div id="blobs" class="fixed pin w-full h-full z-0 transition-transform-long transform_chrome">
             <div id="archive" class="flex items-center justify-center relative">
                 <div id="color1" class="absolute flex items-center justify-center z-1 w-150vw h-140vh transition-all text-yellow">
@@ -103,7 +62,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <div class="wrap">   
         <header class="header">
             <div class="top">
