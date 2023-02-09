@@ -23,13 +23,12 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop : offset.top}, 800);
     });
 
-    $(".mobile-menu").on("click", function(){
+    $(".btn-menu").on("click", function(){
 		$(".menu-open").fadeToggle(300);
 		$(".menu-open").toggleClass("active");
 		$(".menu-item").addClass("move");
 		$(this).toggleClass("on");
 	});
-
 
     // 모달 팝업창
     const close = () => {
