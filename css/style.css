@@ -47,7 +47,6 @@
 	0% {opacity:0; transform:translateX(-30px);}
 	100% {opacity:1; transform:translateX(0);}
 }
-
 .menu-open .menu-item.move > li {
 	-webkit-animation: slideRight 0.8s 0.1s ease-in-out forwards;
 	-moz-animation: slideRight 0.8s 0.1s ease-in-out forwards; 
