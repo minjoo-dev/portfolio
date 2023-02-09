@@ -9,21 +9,21 @@ $(document).ready(function(){
     $('.gnb-about').click(function(){
         const offset = $('.sec-about').offset(); 
         $('html, body').animate({scrollTop : offset.top}, 800);
-        $('menu-open').hide();
+        $('.mobile-menu').hide();
     });
 
     // 화살표 스크롤 이동
     $('.gnb-career').click(function(){
         const offset = $('.sec-career').offset(); 
         $('html, body').animate({scrollTop : offset.top}, 800);
-        $('menu-open').hide();
+        $('.mobile-menu').hide();
     });
 
     // 화살표 스크롤 이동
     $('.gnb-works').click(function(){
         const offset = $('.sec-works').offset(); 
         $('html, body').animate({scrollTop : offset.top}, 800);
-        $('menu-open').hide();
+        $('.mobile-menu').hide();
     });
 
     $(".btn-menu").on("click", function(){
