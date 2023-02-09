@@ -29,7 +29,7 @@
 .mobile-menu {display:none; position:absolute; right:20px; top:10px;}
 .menu-open {display:none; width:100%; height:100%; background-color:#fff; position:fixed; left:0; top:0; z-index:11;}
 .menu-open.active {display:block;}
-.menu-open .btn-menu {position:absolute; left:50%; top:55%; transform:translate(-50%, -50%);}
+.menu-open .menu-open-inner {position:absolute; left:50%; top:55%; transform:translate(-50%, -50%);}
 .menu-open .menu-item > li {opacity:0;font-family: 'Jua', sans-serif;}
 .menu-open .menu-item > li > a {display:inline-block; margin-bottom:20px; font-size:46px; color:#555; position:relative; font-weight: 500;}
 .menu-open .menu-item > li > a:after {display:block; content:''; width:0; height:4px; background-color:#555; 
