@@ -6,6 +6,7 @@ body {
     font-weight: 400;
     letter-spacing: -0.025rem;
     color: #333;
+    background-color: #f6f2ed;
 }
 .wrap {position: relative; z-index: 1;}
 .hidden {width: 0; height: 0; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px; position: absolute; left: -9999px; opacity: 0; visibility: hidden;}
