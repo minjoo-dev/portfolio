@@ -38,7 +38,7 @@
 }
 .menu-open .menu-item > li > a:hover:after {width:100%;}
 
-/* slideRight - 왼쪽에서 오른쪽으로 움직이는 효과 */
+/* slideRight - 왼쪽에서 오른쪽으로 움직이는 애니메이션 */
 @-webkit-keyframes slideRight {
 	0% {opacity:0; transform:translateX(-30px);}
 	100% {opacity:1; transform:translateX(0);}
@@ -65,16 +65,39 @@
 .intro .txt01 span:nth-child(3){color: #f7d343}
 .intro .txt01 {-webkit-animation: fadeUp 2s .3s ease both; animation: fadeUp 2s .3s ease both} 
 .intro .txt02 {-webkit-animation: fadeUp 2s .5s ease both; animation: fadeUp 2s .5s ease both}
+/* fadeUp - 밑에서 위로 움직이는 애니메이션 */
+@-webkit-keyframes fadeUp {
+	0% {transform:translateY(0px);}
+	100% {transform:translateY(30px);}
+}
+@keyframes fadeUp {
+	0% {transform:translateY(0);}
+	100% {transform:translateY(30px);}
+}
 
 .arrow {position: absolute; bottom: 90px; left: 50%; transform: translateX(-50%);}
-.arrow i {position:relative; top: 0; font-size: 45px; color: #222; -webkit-animation: fadeUp 2s 135s ease both; animation: fadeUp 2s 1.3s ease both; transition: all .4s;}
+.arrow i {position:relative; top: 0; font-size: 45px; color: #222; -webkit-animation: fadeUp 2s 1.3s ease both; animation: fadeUp 2s 1.3s ease both;}
 .arrow i:hover {top: 5px;}
 
-.profile .img-box {padding-top: 50px;}
-.profile .img {position: relative; width: 350px; height: 350px; margin: 0 auto; background: url('../images/img-profile.png') no-repeat center; background-size: contain; border-radius: 50%; box-shadow: 5px 5px 10px rgba(0, 0, 0, .1); cursor: pointer; animation: shadow 1.5s .2s infinite;}
-.profile .hover-txt {position: absolute; left: 0; top: 0; display:flex; justify-content:center; flex-direction: column; width:100%; height:100%; opacity: 0; border-radius: 50%; background-color: rgba(256,256,256,.5); transition: all .5s;}
-.profile .hover-txt p {font-weight: 500; font-size: 20px;}
-.profile .img:hover .hover-txt {opacity: 1;}
+/* upDown - 위 아래로 움직이는 애니메이션 */
+@-webkit-keyframes upDown {
+	0% {transform:translateY(10px);}
+	50% {transform:translateY(0px);}
+	100% {transform:translateY(10px);}
+}
+@keyframes upDown {
+	0% {transform:translateY(10px);}
+	50% {transform:translateY(0px);}
+	100% {transform:translateY(10px);}
+}
+
+.profile .img-box {padding-top: 50px; -webkit-animation: upDown 1.8s linear infinite; animation: upDown 1.8s linear infinite;}
+.profile .img {position:relative; width:350px; height:350px; margin: 0 auto; background: url('../images/img-profile.png') no-repeat center; background-size: contain; border-radius: 50%; box-shadow: 5px 5px 10px rgba(0, 0, 0, .1); animation: shadow 1.5s .2s infinite;}
+.profile .hover-txt {position:absolute; left:0; top:0; display:flex; justify-content:center; flex-direction: column; width:100%; height:100%; opacity: 0; border-radius: 50%; background-color: rgba(256,256,256,.5); transition: all .5s;}
+.profile .hover-txt p {padding:5px; font-size:20px; font-weight:500;}
+.profile .hover-txt span {font-size:30px; font-weight:700;}
+.profile .hover-txt i {padding-right:5px;}
+.profile .img:hover .hover-txt {opacity:1;}
 .profile .txt-box {padding:50px 30px 0; word-break:keep-all;}
 .profile .txt-box span {display:block; padding-bottom: 30px; font-size: 18px; font-weight: 500; color:#222;}
 
@@ -86,11 +109,13 @@
 .career-list .list-item .date {display:inline-block; padding-left:10px; font-size:17px; color:#555; font-weight: 400;}
 .dot-list li {position: relative; padding-left:10px; font-size:17px; word-break:keep-all;}
 .dot-list li:before {content:'';position: absolute; left:0; top:11px; width:4px; height:4px; background-color: #333; border-radius: 50%;}
+.sec-career .tool-list {max-width:800px; margin:40px auto 0;}
+.sec-career .tool-list span {display:inline-block; padding-right:5px;}
 
 .sec-works h3:before {background-color: #ffbfb7;}
 .work-list {display: flex; flex-wrap: wrap;} 
 .work-list .list-item {width: 33%; padding: 50px 35px;} 
-.work-list .thumb {position: relative; width: 100%; height: 275px; overflow: hidden; cursor: pointer; border-radius: 10px;}
+.work-list .thumb {position: relative; width: 100%; height: 275px; overflow: hidden; border-radius: 10px;}
 .work-list .thumb .hover-txt {opacity: 0; position: absolute; left: 0; top: 0; width: 100%; height: 0; display: flex; align-items: center; justify-content: center; background-color: rgba(0,0,0,.5); color: #fff; transition: all .3s;}
 .work-list .thumb .hover-txt .tit {font-size: 24px;}
 .work-list .thumb:hover .hover-txt {height: 100%; opacity: 1;}
@@ -137,10 +162,16 @@
 
 	.arrow i {font-size:30px;}
 
-	.section h3.title {font-size:35px;}
+	.section h3.title {font-size:35px; margin-bottom:10px;}
 	.section h3.title:after {bottom:0; height:20px;}
+
+	.profile .img {width:250px; height:250px;}
 
 	.work-list .list-item {width:100%;}
 
+	.profile .hover-txt p {font-size:15px;}
+	.profile .hover-txt span {font-size:20px;}
+
+	.footer {padding-top:20px;}
 	.footer .f-text1{font-size:35px;}
 }

@@ -39,3 +39,9 @@ body {
 .fa-figma {color: #222;}
 .fa-react {color: #00d8ff;}
 .fa-bootstrap {color: #62488a;}
+
+
+/* mobile */
+@media all and (max-width:767px) { 
+	.section .inner {padding:65px 0;}
+}
