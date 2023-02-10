@@ -27,7 +27,7 @@
 .header .btn-menu.on button span:after {top:6px; transform:rotate(-45deg);}
 
 .mobile-menu {display:none; position:absolute; right:20px; top:10px;}
-.menu-open {display:none; width:100%; height:100%; background-color:#fff; position:fixed; left:0; top:0; z-index:11;}
+.menu-open {display:none; width:100%; height:100%; background-color: #f6f2ed; position:fixed; left:0; top:0; z-index:11;}
 .menu-open.active {display:block;}
 .menu-open .menu-open-inner {position:absolute; left:50%; top:55%; transform:translate(-50%, -50%);}
 .menu-open .menu-item > li {opacity:0;font-family: 'Jua', sans-serif;}
